@@ -104,19 +104,9 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-  text-align: center;
-}
-
+<style lang="postcss" scoped>
 .main {
   height: calc(100vh - 64px);
-  @apply flex;
-  @apply flex-col;
-  @apply justify-center;
+  @apply flex flex-col justify-center items-center;
 }
 </style>

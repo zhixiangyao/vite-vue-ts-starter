@@ -3,7 +3,8 @@ import { createApp } from 'vue'
 import App from '/@/App.vue'
 import router from '/@/router'
 import { store, key } from '/@/store'
-import 'windi.css'
+import '@virtual/windi.css'
+import '/@/main.css'
 
 const app = createApp(App)
 

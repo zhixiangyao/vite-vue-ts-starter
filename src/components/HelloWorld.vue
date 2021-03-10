@@ -1,7 +1,9 @@
 <template>
-  <div>{{ msg }}</div>
+  <div class="HelloWorld">
+    <div>{{ msg }}</div>
 
-  <button @click="count++">count is: {{ count }}</button>
+    <button class="btn-indigo" @click="count++">count is: {{ count }}</button>
+  </div>
 </template>
 
 <script lang="ts">
@@ -22,3 +24,13 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="postcss" scoped>
+.HelloWorld {
+  @apply flex flex-col items-center;
+
+  .btn-indigo {
+    @apply my-4 py-2 px-4 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75;
+  }
+}
+</style>
