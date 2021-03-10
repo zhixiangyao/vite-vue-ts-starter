@@ -4,7 +4,7 @@ import App from '/@/App.vue'
 import router from '/@/router'
 import { store, key } from '/@/store'
 import '@virtual/windi.css'
-import '/@/main.css'
+import '/@/assets/main.css'
 
 const app = createApp(App)
 
