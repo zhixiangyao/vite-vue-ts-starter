@@ -29,4 +29,9 @@ export default defineConfig({
       },
     ],
   },
+  css: {
+    modules: {
+      localsConvention: 'camelCaseOnly',
+    },
+  },
 })
