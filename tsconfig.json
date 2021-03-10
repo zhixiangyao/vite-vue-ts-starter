@@ -16,6 +16,15 @@
 
     "jsx": "preserve",
 
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.module\\.(c|le|sa|sc)ss$",
+        }
+      }
+    ],
+
     // 生成相应的 .map文件。
     "sourceMap": true,
 
@@ -24,7 +33,7 @@
 
     // 要包含的类型声明文件名列表
     "types": ["vite/client", "node"],
-    
+
     "typeRoots": ["./node_modules/@types/"],
 
     // 解析非相对模块名的基准目录
@@ -39,6 +48,13 @@
     // 编译过程中需要引入的库文件的列表。
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.css",
+    "src/**/*.scss"
+  ],
   "exclude": ["node_modules"]
 }
