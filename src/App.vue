@@ -1,43 +1,41 @@
 <template>
-  <div>
-    <Nav>
-      <template #title>
-        <div :class="[...baseClassStyle, 'text-green-600', 'flex-shrink-0']">
-          {{ `${store.state.title}` }}
-        </div>
-      </template>
+  <Nav>
+    <template #title>
+      <div :class="[...baseClassStyle, 'text-green-600', 'flex-shrink-0']">
+        {{ `${store.state.title}` }}
+      </div>
+    </template>
 
-      <template #default>
-        <button
-          v-for="{ id, label, name } of navbarList"
-          :key="id"
-          :class="[
-            name === routeName && 'bg-gray-900',
-            name !== routeName && 'text-gray-300',
-            'text-white',
-            'hover:bg-gray-700',
-            ...baseClassStyle,
-          ]"
-          @click="router.push({ name })"
-        >
-          {{ label }}
-        </button>
-      </template>
+    <template #default>
+      <button
+        v-for="{ id, label, name } of navbarList"
+        :key="id"
+        :class="[
+          name === routeName && 'bg-gray-900',
+          name !== routeName && 'text-gray-300',
+          'text-white',
+          'hover:bg-gray-700',
+          ...baseClassStyle,
+        ]"
+        @click="router.push({ name })"
+      >
+        {{ label }}
+      </button>
+    </template>
 
-      <template #info>
-        <div :class="[...baseClassStyle, 'text-blue-600', 'flex-shrink-0']">
-          {{ `当前路由名:${routeName}` }}
-        </div>
-        <div :class="[...baseClassStyle, 'text-red-600', 'flex-shrink-0']">
-          {{ `环境: ${environment}` }}
-        </div>
-      </template>
-    </Nav>
+    <template #info>
+      <div :class="[...baseClassStyle, 'text-blue-600', 'flex-shrink-0']">
+        {{ `当前路由名:${routeName}` }}
+      </div>
+      <div :class="[...baseClassStyle, 'text-red-600', 'flex-shrink-0']">
+        {{ `环境: ${environment}` }}
+      </div>
+    </template>
+  </Nav>
 
-    <main class="main">
-      <router-view />
-    </main>
-  </div>
+  <main class="main">
+    <router-view />
+  </main>
 </template>
 
 <script lang="ts">
@@ -106,7 +104,7 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .main {
-  height: calc(100vh - 64px);
   @apply flex flex-col justify-center items-center;
+  @apply min-h-screen pt-16;
 }
 </style>
