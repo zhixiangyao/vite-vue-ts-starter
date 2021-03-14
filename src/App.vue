@@ -80,6 +80,11 @@ export default defineComponent({
         label: 'demo-windi',
         name: 'TestFourPage',
       },
+      {
+        id: 4,
+        label: 'TensileColumn',
+        name: 'TensileColumn',
+      },
     ]
     const store: Store<State> = useStore()
     const router: Router = useRouter()
