@@ -1,6 +1,6 @@
 // tailwind.config.ts
 import { defineConfig } from 'vite-plugin-windicss'
-import formsPlugin from 'windicss/plugin/forms'
+import typography from 'windicss/plugin/typography'
 import colors from 'windicss/colors'
 
 export default defineConfig({
@@ -18,6 +18,7 @@ export default defineConfig({
         blue: colors.lightBlue,
         red: colors.rose,
         pink: colors.fuchsia,
+        teal: colors.teal,
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
@@ -32,5 +33,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [formsPlugin],
+  plugins: [typography],
 })
