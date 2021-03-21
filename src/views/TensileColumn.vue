@@ -5,15 +5,20 @@
       <div class="resize-line"></div>
       <div class="resize-save"> 左侧的内容，左侧的内容，左侧的内容，左侧的内容 </div>
     </div>
-    <div class="column-right"> 右侧的内容，右侧的内容，右侧的内容，右侧的内容 </div>
+
+    <div class="column-right"> <GridWithBoxShadow /> </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import GridWithBoxShadow from '/@/components/GridWithBoxShadow.vue'
 
 export default defineComponent({
   name: 'TensileColumn',
+  components: {
+    GridWithBoxShadow,
+  },
 })
 </script>
 
@@ -31,7 +36,7 @@ export default defineComponent({
 .column-right {
   height: calc(100vh - 64px);
 
-  @apply box-border flex-1 p-4 min-w-40 bg-blue-300 overflow-hidden;
+  @apply flex items-center justify-center flex-1 p-4 min-w-40 bg-blue-300 overflow-hidden;
 }
 
 .resize-save {
@@ -45,7 +50,6 @@ export default defineComponent({
 }
 
 .resize-bar {
-  width: 200px;
   height: inherit;
   overflow: scroll;
   cursor: ew-resize;
