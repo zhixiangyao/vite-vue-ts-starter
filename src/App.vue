@@ -85,6 +85,11 @@ export default defineComponent({
         label: 'TensileColumn',
         name: 'TensileColumn',
       },
+      {
+        id: 5,
+        label: 'particle',
+        name: 'Particle',
+      },
     ]
     const store: Store<State> = useStore()
     const router: Router = useRouter()
