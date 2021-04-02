@@ -5,7 +5,7 @@ const TestTwoPage = () => import('/@/views/TestTwoPage.vue')
 const TestThreePage = () => import('/@/views/TestThreePage.vue')
 const TestFourPage = () => import('/@/views/TestFourPage/index')
 const TensileColumn = () => import('/@/views/TensileColumn.vue')
-const Particle = () => import('/@/views/Particle/index.vue')
+const Particle = () => import('/@/views/Particle.vue')
 
 const routes: RouteRecordRaw[] = [
   { path: '/', redirect: () => ({ name: 'TestOnePage' }) },
