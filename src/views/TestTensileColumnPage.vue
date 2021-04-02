@@ -15,7 +15,7 @@ import { defineComponent } from 'vue'
 import GridWithBoxShadow from '/@/components/GridWithBoxShadow.vue'
 
 export default defineComponent({
-  name: 'TensileColumn',
+  name: 'TestTensileColumnPage',
   components: {
     GridWithBoxShadow,
   },

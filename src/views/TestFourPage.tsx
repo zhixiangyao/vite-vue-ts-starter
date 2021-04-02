@@ -1,5 +1,5 @@
 import { defineComponent } from 'vue'
-import TailwindDemo from './TailwindDemo'
+import TailwindDemo from '/@/components/TailwindDemo'
 
 export default defineComponent({
   name: 'TestFourPage',

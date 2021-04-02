@@ -7,7 +7,7 @@ import { defineComponent } from 'vue'
 import { useEmitter } from '/@/hooks'
 
 export default defineComponent({
-  name: 'Particle',
+  name: 'TestParticlePage',
   setup() {
     const EmitterCanvas = useEmitter()
 

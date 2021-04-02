@@ -39,11 +39,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, Ref, ref, watch } from 'vue'
-import { useRouter, useRoute, Router, RouteLocationNormalizedLoaded } from 'vue-router'
+import { defineComponent, ref } from 'vue'
+import { useRouter, Router } from 'vue-router'
 import { Store } from 'vuex'
 import { State } from '/@/store/state'
 import { useStore } from '/@/store/index'
+import { useCurrentRouteName } from '/@/hooks'
+
 import Nav from '/@/layout/Nav'
 
 export default defineComponent({
@@ -62,48 +64,39 @@ export default defineComponent({
     const navbarList = [
       {
         id: 1,
-        label: 'demo-ref',
+        label: 'ref',
         name: 'TestOnePage',
       },
       {
         id: 2,
-        label: 'demo-slot',
+        label: 'slot',
         name: 'TestTwoPage',
       },
       {
         id: 3,
-        label: 'demo-router',
+        label: 'router',
         name: 'TestThreePage',
       },
       {
         id: 3,
-        label: 'demo-windi',
+        label: 'windi',
         name: 'TestFourPage',
       },
       {
         id: 4,
         label: 'TensileColumn',
-        name: 'TensileColumn',
+        name: 'TestTensileColumnPage',
       },
       {
         id: 5,
-        label: 'particle',
-        name: 'Particle',
+        label: 'Particle',
+        name: 'TestParticlePage',
       },
     ]
     const store: Store<State> = useStore()
     const router: Router = useRouter()
-    const route: RouteLocationNormalizedLoaded = useRoute()
-    const routeName: Ref<any> = ref()
+    const routeName = useCurrentRouteName()
     const baseClassStyle = ref(['px-3', 'py-2', 'rounded-md', 'text-sm', 'font-medium'])
-
-    // fetch the user information when params change
-    watch(
-      () => route.name,
-      async (newParams) => {
-        routeName.value = newParams
-      },
-    )
 
     const environment: unknown = import.meta.env?.VITE_APP_NODE_ENV ?? 'undefined'
 
