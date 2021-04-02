@@ -17,9 +17,7 @@ export default defineConfig({
        */
       optimize: true,
     }),
-    WindiCSS({
-      safelist: 'prose prose-sm m-auto',
-    }),
+    WindiCSS({}),
   ],
   resolve: {
     alias: [
