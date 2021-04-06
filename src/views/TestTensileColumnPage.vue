@@ -47,12 +47,13 @@ export default defineComponent({
       top: 0;
       right: 0;
       bottom: 0;
-      pointer-events: none;
       border-right: 4px solid gray;
       border-left: 4px solid gray;
+      pointer-events: none;
       transition: border 0.3s ease-in-out;
 
       &::before {
+        content: '·';
         position: absolute;
         top: 50%;
         left: 50%;
@@ -60,7 +61,6 @@ export default defineComponent({
         flex-direction: column-reverse;
         height: 8px;
         color: transparent;
-        content: '·';
         transform: translate(-50%, -50%) scale(2.5);
         transition: color 0.3s ease-in-out;
       }
