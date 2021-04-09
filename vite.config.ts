@@ -17,7 +17,12 @@ export default defineConfig({
        */
       optimize: true,
     }),
-    WindiCSS({}),
+    WindiCSS({
+      scan: {
+        dirs: ['.'], // all files in the cwd
+        fileExtensions: ['vue', 'js', 'ts'], // also enabled scanning for js/ts
+      },
+    }),
   ],
   resolve: {
     alias: [
