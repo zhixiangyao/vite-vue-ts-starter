@@ -3,5 +3,5 @@ export interface State {
 }
 
 export const state: State = {
-  title: 'Vite + Vue3 + TSX + Windi',
+  title: 'Vite + Vue3',
 }
