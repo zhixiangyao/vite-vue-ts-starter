@@ -2,49 +2,38 @@
   "compilerOptions": {
     // 指定ECMAScript目标版本
     "target": "esnext",
-
     // 指定生成哪个模块系统代码
     "module": "esnext",
-
     // 决定如何处理模块。
     "moduleResolution": "node",
-
     // 启用所有严格类型检查选项。
     // 启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict，
     // --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
     "strict": true,
-
     "jsx": "preserve",
-
+    "experimentalDecorators": true,
     "plugins": [
       {
         "name": "typescript-plugin-css-modules",
         "options": {
-          "customMatcher": "\\.module\\.(c|le|sa|sc)ss$",
+          "customMatcher": "\\.module\\.(c|le|sa|sc)ss$"
         }
       }
     ],
-
     // 生成相应的 .map文件。
     "sourceMap": true,
-
     "resolveJsonModule": true,
     "esModuleInterop": true,
-
     // 要包含的类型声明文件名列表
     "types": ["vite/client", "node"],
-
     "typeRoots": ["./node_modules/@types/"],
-
     // 解析非相对模块名的基准目录
     "baseUrl": ".",
-
     // 模块名到基于 baseUrl 的路径映射的列表。
     "paths": {
       // 这里搭配 alias 使用
       "/@/*": ["src/*"]
     },
-
     // 编译过程中需要引入的库文件的列表。
     "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
