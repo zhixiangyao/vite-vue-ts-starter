@@ -80,7 +80,7 @@ export default defineComponent({
       {
         id: 3,
         label: 'windi',
-        name: 'TestFourPage',
+        name: 'TestTailwindrPage',
       },
       {
         id: 4,

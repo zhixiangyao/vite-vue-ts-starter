@@ -3,7 +3,10 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'TailwindDemo',
   setup() {
-    return () => (
+    return {}
+  },
+  render() {
+    return (
       <div class="w-full">
         <div class="min-h-full w-full bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
           <div class="relative py-3 sm:max-w-xl sm:mx-auto">
