@@ -1,26 +1,61 @@
-# Vue 3 + Typescript + Vite
+# Vue 3 + Typescript + Vite + WindiCSS + VueRouter + Vuex
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+该模板将帮助您开始在 Vite 中使用 Vue3、Typescript、WindiCSS 进行开发。
 
-## Recommended IDE Setup
+**编辑器:** [vs code](https://code.visualstudio.com/)
 
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
+**插件:** [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-### If Using `<script setup>`
+## 克隆到本地
 
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+```shell
+git clone git@github.com:xiaojun996/vite-vue-ts-starter.git
+cd vite-vue-ts-starter
+pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
+```
 
-## Type Support For `.vue` Imports in TS
+## Usage
 
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
+### Development
 
-### If Using Volar
+只需运行并访问 http://localhost:3000
 
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
+```shell
+pnpm dev
+```
 
-### If Using Vetur
+### Build
 
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette 5. Search and run "Select TypeScript version" -> "Use workspace version"
+```shell
+pnpm build
+```
+
+### 检查全部
+
+```shell
+pnpm lint:all
+```
+
+### 检查 ESlint
+
+```shell
+pnpm lint:all
+```
+
+### 检查 Prettier
+
+```shell
+pnpm lint:eslint
+```
+
+### 检查 Prettier
+
+```shell
+pnpm lint:prettier
+```
+
+### 检查 Stylelint
+
+```shell
+pnpm lint:stylelint
+```
