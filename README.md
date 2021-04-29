@@ -39,12 +39,6 @@ pnpm lint:all
 ### 检查 ESlint
 
 ```shell
-pnpm lint:all
-```
-
-### 检查 Prettier
-
-```shell
 pnpm lint:eslint
 ```
 
