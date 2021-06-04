@@ -1,9 +1,9 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from 'vue-router'
 
 const TestOnePage = () => import('/@/views/TestOnePage.vue')
-const TestTwoPage = () => import('/@/views/TestTwoPage.vue')
+const TestTwoPage = () => import('/@/views/TestTwoPage')
 const TestThreePage = () => import('/@/views/TestThreePage.vue')
-const TestTailwindrPage = () => import('../views/TestTailwindrPage')
+const TestTailwindrPage = () => import('/@/views/TestTailwindrPage')
 const TestTensileColumnPage = () => import('/@/views/TestTensileColumnPage.vue')
 const TestParticlePage = () => import('/@/views/TestParticlePage.vue')
 

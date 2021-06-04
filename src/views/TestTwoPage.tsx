@@ -1,12 +1,3 @@
-<template>
-  <Father msg="Father">
-    <template #default>
-      <Child msg="Child" />
-    </template>
-  </Father>
-</template>
-
-<script lang="ts">
 import { defineComponent } from 'vue'
 
 import Father from '/@/components/Father'
@@ -28,5 +19,9 @@ export default defineComponent({
   setup() {
     return {}
   },
+  render() {
+    const slots = { default: () => <Child msg="Child" /> }
+
+    return <Father msg="Father">{slots}</Father>
+  },
 })
-</script>
