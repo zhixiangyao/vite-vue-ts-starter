@@ -1,10 +1,9 @@
 import { defineConfig, UserConfigExport } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import WindiCSS from 'vite-plugin-windicss'
-import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将环境变量中的变量从 .env 文件加载到 process.env 中
 import { resolve } from 'path'
 import fs from 'fs'
+import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将环境变量中的变量从 .env 文件加载到 process.env 中
 
 const getEnv = (mode: string): any => {
   const envFiles = [/** mode file */ `.env.${mode}`]
@@ -23,12 +22,10 @@ const getEnv = (mode: string): any => {
   }
 }
 
-/**
- * https://vitejs.dev/config/
- */
+// https://vitejs.dev/config/
 const userConfig = defineConfig({
   plugins: [
-    vue(),
+    vue({ include: [/\.vue$/, /\.md$/] }),
     vueJsx({
       /**
        * options are passed on to @vue/babel-plugin-jsx
@@ -36,12 +33,6 @@ const userConfig = defineConfig({
        */
       optimize: true,
       enableObjectSlots: true,
-    }),
-    WindiCSS({
-      scan: {
-        dirs: ['.'], // all files in the cwd
-        fileExtensions: ['vue', 'ts', 'tsx'], // also enabled scanning for js/ts
-      },
     }),
   ],
   resolve: {
@@ -67,13 +58,15 @@ export default ({ command, mode }): UserConfigExport => {
    * import.meta.env.DEV: {boolean} 应用是否运行在开发环境 (永远与 import.meta.env.PROD相反)。
    */
 
-  const { VITE_APP_NODE_ENV, VITE_APP_TITLE } = getEnv(mode)
+  const { VITE_APP_NODE_ENV, VITE_APP_ENV, VITE_APP_PROXY_URL, VITE_APP_BASE_URL } = getEnv(mode)
   const { log } = console
 
   setTimeout(() => {
     log()
     log('\x1b[33m%s\x1b[0m', `🏭--NODE环境(NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    log('\x1b[36m%s\x1b[0m', `🏠--APP标题(VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+    log('\x1b[36m%s\x1b[0m', `🏠--APP环境(VUE_APP_ENV): ${VITE_APP_ENV}`)
+    log('\x1b[36m%s\x1b[0m', `😈--APP代理URL(VITE_APP_PROXY_URL): ${VITE_APP_PROXY_URL}`)
+    log('\x1b[36m%s\x1b[0m', `🔗--APP基础URL(VITE_APP_BASE_URL): ${VITE_APP_BASE_URL}`)
     log()
   }, 66)
 

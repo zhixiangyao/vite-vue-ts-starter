@@ -1,6 +1,6 @@
-# Vue 3 + Typescript + Vite + WindiCSS + VueRouter + Vuex
+# Vue 3 + Typescript + Vite
 
-该模板将帮助您开始在 Vite 中使用 Vue3、Typescript、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue3、Typescript 进行开发。
 
 **编辑器:** [vs code](https://code.visualstudio.com/)
 
@@ -39,13 +39,13 @@ pnpm lint:all
 ### 检查 ESlint
 
 ```shell
-pnpm lint:eslint
+pnpm lint:all
 ```
 
 ### 检查 Prettier
 
 ```shell
-pnpm lint:prettier
+pnpm lint:eslint
 ```
 
 ### 检查 Stylelint

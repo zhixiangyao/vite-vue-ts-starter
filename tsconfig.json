@@ -1,26 +1,10 @@
 {
   "compilerOptions": {
-    // 指定ECMAScript目标版本
     "target": "esnext",
-    // 指定生成哪个模块系统代码
     "module": "esnext",
-    // 决定如何处理模块。
     "moduleResolution": "node",
-    // 启用所有严格类型检查选项。
-    // 启用 --strict相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict，
-    // --strictNullChecks和 --strictFunctionTypes和--strictPropertyInitialization。
     "strict": true,
     "jsx": "preserve",
-    "experimentalDecorators": true,
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "customMatcher": "\\.module\\.(c|le|sa|sc)ss$"
-        }
-      }
-    ],
-    // 生成相应的 .map文件。
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -34,16 +18,15 @@
       // 这里搭配 alias 使用
       "/@/*": ["src/*"]
     },
-    // 编译过程中需要引入的库文件的列表。
-    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customMatcher": "\\.module\\.(c|le|sa|sc)ss$"
+        }
+      }
+    ],
+    "lib": ["esnext", "dom"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue",
-    "src/**/*.css",
-    "src/**/*.scss"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }
