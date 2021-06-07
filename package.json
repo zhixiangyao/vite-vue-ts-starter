@@ -1,6 +1,7 @@
 {
   "name": "vite-vue-ts-starter",
   "private": true,
+  "author": "xiaojun996 <blueskyzx@icloud.com> <https://github.com/xiaojun996>",
   "scripts": {
     "bootstrap": "npm install",
     "dev": "vite",
