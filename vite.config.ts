@@ -63,8 +63,8 @@ export default ({ command, mode }): UserConfigExport => {
 
   setTimeout(() => {
     log()
-    log('\x1b[33m%s\x1b[0m', `🏭--NODE环境(NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    log('\x1b[36m%s\x1b[0m', `🏠--APP环境(VUE_APP_ENV): ${VITE_APP_ENV}`)
+    log('\x1b[33m%s\x1b[0m', `🏭--NODE环境(VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+    log('\x1b[36m%s\x1b[0m', `🏠--APP环境(VITE_APP_ENV): ${VITE_APP_ENV}`)
     log('\x1b[36m%s\x1b[0m', `😈--APP代理URL(VITE_APP_PROXY_URL): ${VITE_APP_PROXY_URL}`)
     log('\x1b[36m%s\x1b[0m', `🔗--APP基础URL(VITE_APP_BASE_URL): ${VITE_APP_BASE_URL}`)
     log()
