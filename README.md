@@ -42,12 +42,6 @@ pnpm lint:all
 pnpm lint:eslint
 ```
 
-### 检查 Prettier
-
-```shell
-pnpm lint:prettier
-```
-
 ### 检查 Stylelint
 
 ```shell
