@@ -31,6 +31,10 @@ export const userConfig = defineConfig({
         find: '/@',
         replacement: resolve(__dirname, './src'),
       },
+      {
+        find: '/#',
+        replacement: resolve(__dirname, './types'),
+      },
     ],
   },
   css: {

@@ -5,6 +5,7 @@ import type { UserConfigExport } from 'vite'
 
 export default ({ command, mode }): UserConfigExport => {
   /**
+   * 比如:
    * import.meta.env.MODE: {string} 应用运行的模式。
    * import.meta.env.BASE_URL: {string} 部署应用时的基本URL。他由base 配置项决定。
    * import.meta.env.PROD: {boolean} 应用是否运行在生产环境。

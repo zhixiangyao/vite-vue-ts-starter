@@ -1,3 +1,17 @@
+import {
+  defineComponent,
+  onBeforeMount,
+  onBeforeUnmount,
+  onBeforeUpdate,
+  onMounted,
+  onUnmounted,
+  onUpdated,
+  toRef,
+  renderSlot,
+} from 'vue'
+
+import type { Ref } from 'vue'
+
 export default defineComponent({
   name: 'Father',
   props: {
@@ -17,6 +31,8 @@ export default defineComponent({
    * @returns
    */
   setup(props, { slots }) {
+    console.info(`👨Father: beforeCreate-1`)
+
     onBeforeMount(() => {
       console.info(`👨Father: beforeMount`)
     })
@@ -45,22 +61,11 @@ export default defineComponent({
     )
   },
   beforeCreate() {
-    console.info(`👨Father: beforeCreate`)
+    // 会被废弃 在 setup 后执行
+    console.info(`👨Father: beforeCreate-2`)
   },
   created() {
-    console.info(`👨Father: created`)
+    // 会被废弃 在 setup 后执行
+    console.info(`👨Father: created-3`)
   },
 })
-
-import {
-  defineComponent,
-  onBeforeMount,
-  onBeforeUnmount,
-  onBeforeUpdate,
-  onMounted,
-  onUnmounted,
-  onUpdated,
-  toRef,
-  renderSlot,
-  Ref,
-} from 'vue'

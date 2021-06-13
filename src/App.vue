@@ -40,13 +40,14 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
-import { useRouter, Router } from 'vue-router'
-import { Store } from 'vuex'
-import { State } from '/@/store/state'
+import { useRouter } from 'vue-router'
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
 
 import Nav from '/@/layout/Nav'
+
+import type { State, Store } from '/#/store'
+import type { Router } from '/#/router'
 
 export default defineComponent({
   name: 'App',

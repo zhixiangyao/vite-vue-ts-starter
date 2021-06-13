@@ -1,3 +1,5 @@
+import { debounce } from '/@/utils'
+
 /**
  * A basic recreation of http://www.cesmes.fi/#pallo.swf using JavaScript and Canvas
  * Particle system based on http://www.zen-sign.com/experiments/jsemitter2/
@@ -156,7 +158,7 @@ export default class Emitter {
   }
 }
 
-class Particle {
+export class Particle {
   public x: number
   public y: number
   public size: number
@@ -171,24 +173,5 @@ class Particle {
     this.h = 0
     this.s = 0
     this.l = 0
-  }
-}
-
-/**
- * 返回一个函数，只要该函数继续被调用，它就不会被触发。
- * 该函数将在不再被调用后被调用N毫秒。如果通过了“立即”，
- * 则触发前沿，而不是尾随。
- */
-function debounce(func: Function, wait: number, immediate: boolean): () => void {
-  let timeout: any = null
-  return (...args: any[]) => {
-    const later = () => {
-      timeout = null
-      if (!immediate) func(...args)
-    }
-    const callNow = immediate && !timeout
-    clearTimeout(timeout)
-    timeout = setTimeout(later, wait)
-    if (callNow) func(...args)
   }
 }

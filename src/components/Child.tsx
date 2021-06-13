@@ -1,3 +1,14 @@
+import {
+  defineComponent,
+  onBeforeMount,
+  onBeforeUnmount,
+  onBeforeUpdate,
+  onMounted,
+  onUnmounted,
+  onUpdated,
+  toRef,
+} from 'vue'
+
 export default defineComponent({
   name: 'Child',
   props: {
@@ -6,6 +17,8 @@ export default defineComponent({
     },
   },
   setup(props) {
+    console.info(`👦Child: beforeCreate-1`)
+
     const msg = toRef(props, 'msg')
 
     onBeforeMount(() => {
@@ -30,20 +43,11 @@ export default defineComponent({
     return () => <div>{msg.value}</div>
   },
   beforeCreate() {
-    console.info(`👦Child: beforeCreate`)
+    // 会被废弃 在 setup 后执行
+    console.info(`👦Child: beforeCreate-2`)
   },
   created() {
-    console.info(`👦Child: created`)
+    // 会被废弃 在 setup 后执行
+    console.info(`👦Child: created-3`)
   },
 })
-
-import {
-  defineComponent,
-  onBeforeMount,
-  onBeforeUnmount,
-  onBeforeUpdate,
-  onMounted,
-  onUnmounted,
-  onUpdated,
-  toRef,
-} from 'vue'

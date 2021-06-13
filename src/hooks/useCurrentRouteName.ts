@@ -1,5 +1,6 @@
 import { ref, watch, Ref } from 'vue'
-import { useRoute, RouteLocationNormalizedLoaded } from 'vue-router'
+import { useRoute } from 'vue-router'
+import type { RouteLocationNormalizedLoaded } from 'vue-router'
 
 export function useCurrentRouteName(): Ref<any> {
   const currentRouteName: Ref<any> = ref()
