@@ -1,7 +1,8 @@
+<script lang="tsx">
 import { defineComponent } from 'vue'
 
-import Father from '/@/components/Father'
-import Child from '/@/components/Child'
+import Father from '/@/components/Father.vue'
+import Child from '/@/components/Child.vue'
 
 export default defineComponent({
   name: 'TestTwoPage',
@@ -9,12 +10,10 @@ export default defineComponent({
     Father,
     Child,
   },
-  setup() {
-    return {}
-  },
   render() {
     const slots = { default: () => <Child msg="Child" /> }
 
     return <Father msg="Father">{slots}</Father>
   },
 })
+</script>

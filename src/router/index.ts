@@ -9,7 +9,11 @@ const routes: RouteRecordRaw[] = [
     component: () => import('/@/views/TestOnePage.vue'),
     name: 'TestOnePage',
   },
-  { path: '/TestTwoPage', component: () => import('/@/views/TestTwoPage'), name: 'TestTwoPage' },
+  {
+    path: '/TestTwoPage',
+    component: () => import('/@/views/TestTwoPage.vue'),
+    name: 'TestTwoPage',
+  },
   {
     path: '/TestThreePage',
     component: () => import('/@/views/TestThreePage.vue'),
@@ -17,7 +21,7 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/TestTailwindrPage',
-    component: () => import('/@/views/TestTailwindrPage'),
+    component: () => import('/@/views/TestTailwindrPage/index.vue'),
     name: 'TestTailwindrPage',
   },
   {

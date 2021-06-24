@@ -1,10 +1,8 @@
+<script lang="tsx">
 import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'TailwindDemo',
-  setup() {
-    return {}
-  },
   render() {
     return (
       <div class="w-full">
@@ -106,3 +104,4 @@ export default defineComponent({
     )
   },
 })
+</script>

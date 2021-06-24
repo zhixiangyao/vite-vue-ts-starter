@@ -1,3 +1,4 @@
+<script lang="tsx">
 import {
   defineComponent,
   onBeforeMount,
@@ -51,3 +52,4 @@ export default defineComponent({
     console.info(`👦Child: created-3`)
   },
 })
+</script>
