@@ -1,7 +1,7 @@
 <template>
   <Nav>
     <template #title>
-      <div :class="[...baseClassStyle, 'text-green-600', 'flex-shrink-0']">
+      <div class="text-green-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
         {{ `${store.state.title}` }}
       </div>
     </template>
@@ -10,13 +10,8 @@
       <button
         v-for="{ id, label, name } of navbarList"
         :key="id"
-        :class="[
-          name === routeName && 'bg-gray-900',
-          name !== routeName && 'text-gray-300',
-          'text-white',
-          'hover:bg-gray-700',
-          ...baseClassStyle,
-        ]"
+        :class="[name === routeName && 'bg-gray-900', name !== routeName && 'text-gray-300']"
+        class="hover:bg-gray-700 text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium"
         @click="router.push({ name })"
       >
         {{ label }}
@@ -24,11 +19,8 @@
     </template>
 
     <template #info>
-      <div :class="[...baseClassStyle, 'text-blue-600', 'flex-shrink-0']">
+      <div class="text-blue-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
         {{ `当前路由名:${routeName}` }}
-      </div>
-      <div :class="[...baseClassStyle, 'text-red-600', 'flex-shrink-0']">
-        {{ `环境: ${environment}` }}
       </div>
     </template>
   </Nav>
@@ -39,7 +31,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
@@ -97,11 +89,8 @@ export default defineComponent({
     const store: Store<State> = useStore()
     const router: Router = useRouter()
     const routeName = useCurrentRouteName()
-    const baseClassStyle = ref(['px-3', 'py-2', 'rounded-md', 'text-sm', 'font-medium'])
 
-    const environment: unknown = import.meta.env?.VITE_APP_NODE_ENV ?? 'undefined'
-
-    return { navbarList, environment, store, router, routeName, baseClassStyle }
+    return { navbarList, store, router, routeName }
   },
 })
 </script>
