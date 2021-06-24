@@ -44,10 +44,10 @@ import { useRouter } from 'vue-router'
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
 
-import Nav from '/@/layout/Nav'
+import Nav from '/@/layout/Nav.vue'
 
-import type { State, Store } from '/#/store'
-import type { Router } from '/#/router'
+import type { State, Store } from '/@/types'
+import type { Router } from '/@/types'
 
 export default defineComponent({
   name: 'App',

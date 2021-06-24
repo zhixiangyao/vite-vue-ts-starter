@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import type { RouteRecordRaw } from '/#/router'
+import type { RouteRecordRaw } from '/@/types'
 
 const routes: RouteRecordRaw[] = [
   { path: '/', redirect: () => ({ name: 'TestOnePage' }) },

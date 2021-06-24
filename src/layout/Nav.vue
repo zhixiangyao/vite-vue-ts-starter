@@ -1,3 +1,4 @@
+<script lang="tsx">
 import { defineComponent, renderSlot } from 'vue'
 
 export default defineComponent({
@@ -25,3 +26,4 @@ export default defineComponent({
     )
   },
 })
+</script>

@@ -2,7 +2,7 @@ import { createStore, useStore as baseUseStore } from 'vuex'
 import { state } from '/@/store/state'
 
 import type { InjectionKey } from 'vue'
-import type { State, Store } from '/#/store'
+import type { State, Store } from '/@/types'
 
 // define injection key
 export const key: InjectionKey<Store<State>> = Symbol()

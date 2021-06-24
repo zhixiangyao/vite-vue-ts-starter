@@ -3,8 +3,7 @@
   "private": true,
   "author": "xiaojun996 <blueskyzx@icloud.com> <https://github.com/xiaojun996>",
   "scripts": {
-    "bootstrap": "npm install",
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
