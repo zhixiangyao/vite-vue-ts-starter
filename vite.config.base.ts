@@ -18,12 +18,7 @@ export const userConfig = defineConfig({
       optimize: true,
       enableObjectSlots: true,
     }),
-    WindiCSS({
-      scan: {
-        dirs: ['.'], // all files in the cwd
-        fileExtensions: ['vue', 'ts', 'tsx'], // also enabled scanning for js/ts
-      },
-    }),
+    WindiCSS(),
   ],
   resolve: {
     alias: [

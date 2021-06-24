@@ -1,6 +1,4 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "files.associations": {
-    "*.css": "postcss"
-  }
+  "css.validate": false
 }
