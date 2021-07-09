@@ -11,13 +11,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import GridWithBoxShadow from '/@/components/GridWithBoxShadow.vue'
+import { defineComponent, defineAsyncComponent } from 'vue'
 
 export default defineComponent({
   name: 'TestTensileColumnPage',
   components: {
-    GridWithBoxShadow,
+    GridWithBoxShadow: defineAsyncComponent(() => import('/@/components/GridWithBoxShadow.vue')),
   },
 })
 </script>
@@ -41,7 +40,7 @@ export default defineComponent({
       overflow-x: hidden;
     }
 
-    /* 拖拽线 */
+    /* 拖拽 line */
     .resize-line {
       position: absolute;
       top: 0;

@@ -3,21 +3,21 @@ import { createRouter, createWebHistory } from 'vue-router'
 import type { RouteRecordRaw } from '/@/types'
 
 const routes: RouteRecordRaw[] = [
-  { path: '/', redirect: () => ({ name: 'TestOnePage' }) },
+  { path: '/', redirect: () => ({ name: 'TestHelloWorld' }) },
   {
-    path: '/TestOnePage',
-    component: () => import('/@/views/TestOnePage.vue'),
-    name: 'TestOnePage',
+    path: '/TestHelloWorld',
+    component: () => import('/@/views/TestHelloWorld.vue'),
+    name: 'TestHelloWorld',
   },
   {
-    path: '/TestTwoPage',
-    component: () => import('/@/views/TestTwoPage.vue'),
-    name: 'TestTwoPage',
+    path: '/TestFatherChild',
+    component: () => import('/@/views/TestFatherChild.vue'),
+    name: 'TestFatherChild',
   },
   {
-    path: '/TestThreePage',
-    component: () => import('/@/views/TestThreePage.vue'),
-    name: 'TestThreePage',
+    path: '/TestRouteLeave',
+    component: () => import('/@/views/TestRouteLeave.vue'),
+    name: 'TestRouteLeave',
   },
   {
     path: '/TestTailwindrPage',

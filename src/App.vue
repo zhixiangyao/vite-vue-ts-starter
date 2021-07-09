@@ -31,44 +31,33 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, defineAsyncComponent } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
-
-import Nav from '/@/layout/Nav.vue'
 
 import type { State, Store } from '/@/types'
 import type { Router } from '/@/types'
 
 export default defineComponent({
   name: 'App',
-  components: {
-    Nav,
-  },
-  /**
-   * 因为 props 是响应式的，你不能使用 ES6 解构，因为它会消除 prop 的响应性。
-   * https://v3.cn.vuejs.org/guide/composition-api-setup.html#props
-   * @param props
-   * @param context
-   * @returns
-   */
+  components: { Nav: defineAsyncComponent(() => import('/@/layout/Nav.vue')) },
   setup() {
     const navbarList = [
       {
         id: 1,
         label: 'ref',
-        name: 'TestOnePage',
+        name: 'TestHelloWorld',
       },
       {
         id: 2,
         label: 'slot',
-        name: 'TestTwoPage',
+        name: 'TestFatherChild',
       },
       {
         id: 3,
         label: 'router',
-        name: 'TestThreePage',
+        name: 'TestRouteLeave',
       },
       {
         id: 3,

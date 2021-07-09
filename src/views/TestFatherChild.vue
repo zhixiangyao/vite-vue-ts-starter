@@ -5,15 +5,11 @@ import Father from '/@/components/Father.vue'
 import Child from '/@/components/Child.vue'
 
 export default defineComponent({
-  name: 'TestTwoPage',
-  components: {
-    Father,
-    Child,
-  },
-  render() {
+  name: 'TestFatherChild',
+  setup() {
     const slots = { default: () => <Child msg="Child" /> }
 
-    return <Father msg="Father">{slots}</Father>
+    return () => <Father msg="Father">{slots}</Father>
   },
 })
 </script>
