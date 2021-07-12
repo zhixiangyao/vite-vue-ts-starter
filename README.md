@@ -9,7 +9,7 @@
 ## 克隆到本地
 
 ```shell
-git clone git@github.com:yao-zhixiang/vite-vue-ts-starter.git
+git clone git@github.com:zhixiangyao/vite-vue-ts-starter.git
 cd vite-vue-ts-starter
 pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
 ```
