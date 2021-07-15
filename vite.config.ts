@@ -22,10 +22,8 @@ export default ({ command, mode }): UserConfigExport => {
   }, 66)
 
   if (command === 'serve') {
-    // serve 独有配置
     return userConfig
   } else {
-    // build 独有配置
     return userConfig
   }
 }

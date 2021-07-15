@@ -6,11 +6,9 @@ export const getEnv = (mode: string): any => {
 
   for (const envFile of envFiles) {
     try {
-      const env = {}
+      const env = Object.create(null)
       const envConfig = dotenv.parse(fs.readFileSync(envFile))
-      for (const k in envConfig) {
-        env[k] = envConfig[k]
-      }
+      for (const k in envConfig) Object.assign(env, { k: envConfig[k] })
       return env
     } catch (error) {
       console.error(error)
