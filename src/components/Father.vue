@@ -44,9 +44,9 @@ export default defineComponent({
     const msg: Ref<string | undefined> = toRef(props, 'msg')
 
     return () => (
-      <div>
+      <div class="bg-red-600 text-white p-4">
         <div>{msg.value ?? 'default'}</div>
-        <div>{renderSlot(slots, 'default')}</div>
+        {renderSlot(slots, 'default')}
       </div>
     )
   },

@@ -41,7 +41,7 @@ export default defineComponent({
       console.info(`👦Child: unmounted`)
     })
 
-    return () => <div>{msg.value}</div>
+    return () => <div class="bg-blue-600 text-white p-2">{msg.value}</div>
   },
   beforeCreate() {
     // 会被废弃 在 setup 后执行
