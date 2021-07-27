@@ -7,41 +7,28 @@ import {
   onMounted,
   onUnmounted,
   onUpdated,
-  toRef,
+  toRefs,
   renderSlot,
 } from 'vue'
-
-import type { Ref } from 'vue'
 
 export default defineComponent({
   name: 'Father',
   props: {
     msg: {
       type: String,
+      default: '',
     },
   },
   setup(props, { slots }) {
     console.info(`👨Father: beforeCreate-1`)
+    onBeforeMount(() => console.info(`👨Father: beforeMount`))
+    onMounted(() => console.info(`👨Father: mounted`))
+    onBeforeUpdate(() => console.info(`👨Father: beforeUpdate`))
+    onUpdated(() => console.info(`👨Father: updated`))
+    onBeforeUnmount(() => console.info(`👨Father: beforeUnmount`))
+    onUnmounted(() => console.info(`👨Father: unmounted`))
 
-    onBeforeMount(() => {
-      console.info(`👨Father: beforeMount`)
-    })
-    onMounted(() => {
-      console.info(`👨Father: mounted`)
-    })
-    onBeforeUpdate(() => {
-      console.info(`👨Father: beforeUpdate`)
-    })
-    onUpdated(() => {
-      console.info(`👨Father: updated`)
-    })
-    onBeforeUnmount(() => {
-      console.info(`👨Father: beforeUnmount`)
-    })
-    onUnmounted(() => {
-      console.info(`👨Father: unmounted`)
-    })
-    const msg: Ref<string | undefined> = toRef(props, 'msg')
+    const { msg } = toRefs(props)
 
     return () => (
       <div class="bg-red-600 text-white p-4">

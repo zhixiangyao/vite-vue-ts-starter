@@ -1,9 +1,7 @@
 <template>
   <Nav>
     <template #title>
-      <div class="text-green-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
-        {{ `${store.state.title}` }}
-      </div>
+      {{ `${store.state.title}` }}
     </template>
 
     <template #default>
@@ -19,15 +17,13 @@
     </template>
 
     <template #info>
-      <div class="text-blue-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
-        {{ `当前路由名:${routeName}` }}
-      </div>
+      {{ `当前路由名:${routeName}` }}
     </template>
   </Nav>
 
-  <main class="main">
+  <Main>
     <router-view />
-  </main>
+  </Main>
 </template>
 
 <script lang="ts">
@@ -41,7 +37,10 @@ import type { Router } from '/@/types'
 
 export default defineComponent({
   name: 'App',
-  components: { Nav: defineAsyncComponent(() => import('/@/layout/Nav.vue')) },
+  components: {
+    Nav: defineAsyncComponent(() => import('/@/layout/Nav.vue')),
+    Main: defineAsyncComponent(() => import('/@/layout/Main.vue')),
+  },
   setup() {
     const navbarList = [
       {
@@ -83,10 +82,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="postcss" scoped>
-.main {
-  @apply flex flex-col justify-center items-center;
-  @apply min-h-screen pt-16;
-}
-</style>
