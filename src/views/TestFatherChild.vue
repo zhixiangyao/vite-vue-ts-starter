@@ -7,9 +7,17 @@ import Child from '/@/components/Child.vue'
 export default defineComponent({
   name: 'TestFatherChild',
   setup() {
-    const slots = { default: () => <Child msg="Child" /> }
-
-    return () => <Father msg="Father">{slots}</Father>
+    return () => (
+      <Father
+        msg="Father"
+        v-slots={{
+          default: ({ name }: { [x: string]: unknown }) => {
+            console.log('Slot Prop:', name)
+            return <Child msg="Child" />
+          },
+        }}
+      />
+    )
   },
 })
 </script>

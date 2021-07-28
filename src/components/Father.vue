@@ -9,6 +9,8 @@ import {
   onUpdated,
   toRefs,
   renderSlot,
+  reactive,
+  useSlots,
 } from 'vue'
 
 export default defineComponent({
@@ -19,7 +21,7 @@ export default defineComponent({
       default: '',
     },
   },
-  setup(props, { slots }) {
+  setup(props) {
     console.info(`👨Father: beforeCreate-1`)
     onBeforeMount(() => console.info(`👨Father: beforeMount`))
     onMounted(() => console.info(`👨Father: mounted`))
@@ -28,12 +30,14 @@ export default defineComponent({
     onBeforeUnmount(() => console.info(`👨Father: beforeUnmount`))
     onUnmounted(() => console.info(`👨Father: unmounted`))
 
+    const obj = reactive({ name: 'yaozhixiang', sex: '男' })
     const { msg } = toRefs(props)
+    const slots = useSlots()
 
     return () => (
       <div class="bg-red-600 text-white p-4">
         <div>{msg.value ?? 'default'}</div>
-        {renderSlot(slots, 'default')}
+        {renderSlot(slots, 'default', obj)}
       </div>
     )
   },
