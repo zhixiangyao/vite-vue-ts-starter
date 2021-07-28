@@ -27,10 +27,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, defineAsyncComponent } from 'vue'
+import { defineComponent, defineAsyncComponent, provide } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
+
+import { appDataKey, appDataValue } from '/@/provide'
 
 import type { State, Store } from '/@/types'
 import type { Router } from '/@/types'
@@ -77,6 +79,8 @@ export default defineComponent({
     const store: Store<State> = useStore()
     const router: Router = useRouter()
     const routeName = useCurrentRouteName()
+
+    provide(appDataKey, appDataValue)
 
     return { navbarList, store, router, routeName }
   },

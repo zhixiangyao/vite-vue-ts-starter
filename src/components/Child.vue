@@ -7,7 +7,7 @@ import {
   onMounted,
   onUnmounted,
   onUpdated,
-  toRef,
+  toRefs,
 } from 'vue'
 
 export default defineComponent({
@@ -16,11 +16,14 @@ export default defineComponent({
     msg: {
       type: String,
     },
+    slotProp: {
+      type: String,
+    },
   },
   setup(props) {
     console.info(`👦Child: beforeCreate-1`)
 
-    const msg = toRef(props, 'msg')
+    const { msg, slotProp } = toRefs(props)
 
     onBeforeMount(() => {
       console.info(`👦Child: beforeMount`)
@@ -41,7 +44,12 @@ export default defineComponent({
       console.info(`👦Child: unmounted`)
     })
 
-    return () => <div class="bg-blue-600 text-white p-2">{msg.value}</div>
+    return () => (
+      <>
+        <p>Slot-Prop: {slotProp.value}</p>
+        <div class="bg-blue-600 text-white p-2">{msg.value}</div>
+      </>
+    )
   },
   beforeCreate() {
     // 会被废弃 在 setup 后执行
