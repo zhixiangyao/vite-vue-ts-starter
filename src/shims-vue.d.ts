@@ -3,3 +3,9 @@ declare module '*.vue' {
   const component: DefineComponent<{}, {}, any>
   export default component
 }
+
+declare interface Window {
+  L2Dwidget: {
+    init: any
+  }
+}

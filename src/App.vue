@@ -2,11 +2,9 @@
   <router-view />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
+import { onMounted } from 'vue'
+import { Live2dWidget } from '/@/logic'
 
-export default defineComponent({
-  name: 'App',
-  setup() {},
-})
+onMounted(Live2dWidget)
 </script>
