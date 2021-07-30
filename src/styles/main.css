@@ -8,11 +8,6 @@
   text-align: center;
 }
 
-html.dark {
-  background: #12121299;
-  color: white;
-}
-
 body {
   @apply overflow-y-scroll;
 }

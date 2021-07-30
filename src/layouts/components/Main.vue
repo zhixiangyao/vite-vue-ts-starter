@@ -11,7 +11,7 @@ export default defineComponent({
 
 <style lang="postcss" scoped>
 .main {
-  @apply flex flex-col justify-center items-center;
+  @apply flex flex-col justify-center items-center dark:bg-black;
   @apply min-h-screen pt-16;
 }
 </style>

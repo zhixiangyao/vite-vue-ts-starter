@@ -60,9 +60,9 @@ export default defineComponent({
                 <button
                   key={id}
                   class={[
-                    name === routeName.value && 'bg-gray-900 dark:text-white',
+                    name === routeName.value && 'bg-gray-700 dark:text-white',
                     name !== routeName.value && `text-gray-300`,
-                    'hover:bg-gray-700 text-white dark:text-black flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
+                    'hover:bg-gray-700 text-white dark:text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
                   ]}
                   onClick={() => router.push({ name })}
                 >
