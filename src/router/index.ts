@@ -1,4 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import NProgress from 'nprogress'
+import 'nprogress/nprogress.css'
 
 import type { RouteRecordRaw } from '/@/types'
 
@@ -40,6 +42,13 @@ const routes: RouteRecordRaw[] = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+})
+
+router.beforeEach(() => {
+  NProgress.start()
+})
+router.afterEach(() => {
+  NProgress.done()
 })
 
 export default router
