@@ -7,7 +7,7 @@ export default defineComponent({
     const slots = useSlots()
 
     return () => (
-      <nav class="bg-gray-800 fixed top-0 left-0 right-0 z-10">
+      <nav class="bg-gray-800 dark:bg-white fixed top-0 left-0 right-0 z-10">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden">
             <div class="text-green-600 flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium">
