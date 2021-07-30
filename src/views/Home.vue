@@ -6,7 +6,7 @@
 import { defineComponent, defineAsyncComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TestHelloWorld',
+  name: 'Home',
   components: {
     HelloWorld: defineAsyncComponent(() => import('/@/components/HelloWorld.vue')),
   },

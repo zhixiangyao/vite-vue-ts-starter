@@ -14,7 +14,7 @@
 import { defineComponent, defineAsyncComponent } from 'vue'
 
 export default defineComponent({
-  name: 'TestTensileColumnPage',
+  name: 'TensileColumn',
   components: {
     GridWithBoxShadow: defineAsyncComponent(() => import('/@/components/GridWithBoxShadow.vue')),
   },

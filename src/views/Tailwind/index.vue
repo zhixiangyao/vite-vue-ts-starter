@@ -4,7 +4,7 @@ import { defineComponent } from 'vue'
 import TailwindDemo from './components/TailwindDemo.vue'
 
 export default defineComponent({
-  name: 'TestTailwindrPage',
+  name: 'Tailwind',
   setup() {
     return () => (
       <>

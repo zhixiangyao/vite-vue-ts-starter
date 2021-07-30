@@ -33,4 +33,7 @@ export const userConfig = defineConfig({
       localsConvention: 'camelCaseOnly',
     },
   },
+  optimizeDeps: {
+    include: ['vue', 'vue-router', '@vueuse/core'],
+  },
 })

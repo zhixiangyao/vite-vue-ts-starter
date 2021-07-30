@@ -1,5 +1,5 @@
 import type { InjectionKey, Ref } from 'vue'
 
-const appDataKey: InjectionKey<Ref<string>> = Symbol('app-page-data-key')
+const defaultDataKey: InjectionKey<Ref<string>> = Symbol('default-page-data-key')
 
-export { appDataKey }
+export { defaultDataKey }

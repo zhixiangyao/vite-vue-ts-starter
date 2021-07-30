@@ -1,7 +1,7 @@
 <script lang="tsx">
 import { defineComponent, inject } from 'vue'
 
-import { appDataKey } from '/@/provide'
+import { defaultDataKey } from '/@/provide'
 
 import Father from '/@/components/Father.vue'
 import Child from '/@/components/Child.vue'
@@ -9,11 +9,11 @@ import Child from '/@/components/Child.vue'
 export default defineComponent({
   name: 'TestFatherChild',
   setup() {
-    const data = inject(appDataKey)
+    const defaultDataValue = inject(defaultDataKey)
 
     return () => (
       <>
-        <p>Provide-Inject: {data?.value}</p>
+        <p>Provide-Inject: {defaultDataValue?.value}</p>
         <Father
           msg="Father"
           v-slots={{
