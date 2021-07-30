@@ -4,7 +4,7 @@ import { RouterView, useRouter } from 'vue-router'
 
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
-import { defaultDataKey } from '/@/logic/provide'
+import { defaultDataKey } from '/@/logic'
 
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'

@@ -1,3 +1,3 @@
 export * from './dark'
-
-export { default as Live2dWidget } from './Live2dWidget'
+export { default as Live2dWidget } from './live2d'
+export * from './provide'

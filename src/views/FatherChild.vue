@@ -1,7 +1,7 @@
 <script lang="tsx">
 import { defineComponent, inject } from 'vue'
 
-import { defaultDataKey } from '/@/logic/provide'
+import { defaultDataKey } from '/@/logic'
 
 import Father from '/@/components/Father.vue'
 import Child from '/@/components/Child.vue'
