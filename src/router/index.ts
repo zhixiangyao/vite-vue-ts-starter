@@ -14,9 +14,9 @@ const routes: RouteRecordRaw[] = [
         component: () => import('/@/views/Home.vue'),
       },
       {
-        path: 'TestFatherChild',
-        name: 'TestFatherChild',
-        component: () => import('/@/views/TestFatherChild.vue'),
+        path: 'FatherChild',
+        name: 'FatherChild',
+        component: () => import('/@/views/FatherChild.vue'),
       },
       {
         path: 'Tailwind',

@@ -7,7 +7,7 @@ import Father from '/@/components/Father.vue'
 import Child from '/@/components/Child.vue'
 
 export default defineComponent({
-  name: 'TestFatherChild',
+  name: 'FatherChild',
   setup() {
     const defaultDataValue = inject(defaultDataKey)
 

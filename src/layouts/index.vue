@@ -15,13 +15,13 @@ import type { Router } from '/@/types'
 const navbarList = [
   {
     id: 1,
-    label: 'ref',
+    label: 'Home',
     name: 'Home',
   },
   {
     id: 2,
-    label: 'slot',
-    name: 'TestFatherChild',
+    label: 'FatherChild',
+    name: 'FatherChild',
   },
   {
     id: 3,
