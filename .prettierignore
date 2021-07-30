@@ -1,4 +1,5 @@
 /dist/*
+/dist-ssr/*
 .local
 .output.js
 /node_modules/**

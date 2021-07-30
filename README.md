@@ -30,7 +30,7 @@ pnpm dev
 pnpm build
 ```
 
-### 检查全部
+### 检查 all
 
 ```shell
 pnpm lint:all
@@ -40,6 +40,12 @@ pnpm lint:all
 
 ```shell
 pnpm lint:eslint
+```
+
+### 检查 Prettier
+
+```shell
+pnpm lint:prettier
 ```
 
 ### 检查 Stylelint
