@@ -27,12 +27,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, defineAsyncComponent, provide } from 'vue'
+import { defineComponent, defineAsyncComponent, provide, readonly, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
 
-import { appDataKey, appDataValue } from '/@/provide'
+import { appDataKey } from '/@/provide'
 
 import type { State, Store } from '/@/types'
 import type { Router } from '/@/types'
@@ -40,8 +40,8 @@ import type { Router } from '/@/types'
 export default defineComponent({
   name: 'App',
   components: {
-    Nav: defineAsyncComponent(() => import('/@/layout/Nav.vue')),
-    Main: defineAsyncComponent(() => import('/@/layout/Main.vue')),
+    Nav: defineAsyncComponent(() => import('/@/layouts/Nav.vue')),
+    Main: defineAsyncComponent(() => import('/@/layouts/Main.vue')),
   },
   setup() {
     const navbarList = [
@@ -80,7 +80,8 @@ export default defineComponent({
     const router: Router = useRouter()
     const routeName = useCurrentRouteName()
 
-    provide(appDataKey, appDataValue)
+    const appDataValue = ref('从 app 注入的')
+    provide(appDataKey, readonly(appDataValue))
 
     return { navbarList, store, router, routeName }
   },

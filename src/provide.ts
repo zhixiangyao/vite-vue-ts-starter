@@ -1,11 +1,5 @@
-import { ref } from 'vue'
 import type { InjectionKey, Ref } from 'vue'
 
-type AppDataValue = string
+const appDataKey: InjectionKey<Ref<string>> = Symbol('app-page-data-key')
 
-export { AppDataValue }
-
-const appDataKey: InjectionKey<Ref<AppDataValue>> = Symbol('app-page-data-key')
-const appDataValue: Ref<AppDataValue> = ref('从 app 注入的')
-
-export { appDataKey, appDataValue }
+export { appDataKey }
