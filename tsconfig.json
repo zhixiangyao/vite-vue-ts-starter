@@ -3,8 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    // 启用所有严格类型检查选项。
-    // 启用 --strict 相当于启用 --noImplicitAny, --noImplicitThis, --alwaysStrict, --strictNullChecks 和 --strictFunctionTypes 和 --strictPropertyInitialization。
+    // --strict === --noImplicitAny, --noImplicitThis, --alwaysStrict, --strictNullChecks, --strictFunctionTypes, --strictPropertyInitialization。
     "strict": true,
     "jsx": "preserve",
     "experimentalDecorators": true,
@@ -15,7 +14,6 @@
     "typeRoots": ["./node_modules/@types/"],
     "baseUrl": ".",
     "paths": {
-      // 这里搭配 alias 使用
       "/@/*": ["src/*"]
     },
     "plugins": [
@@ -26,7 +24,6 @@
         }
       }
     ],
-    // 编译过程中需要引入的库文件的列表。
     "lib": ["esnext", "dom"]
   },
   "include": [
