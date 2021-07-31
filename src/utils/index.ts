@@ -1,4 +1,4 @@
-export function debounce(func: Function, wait: number, immediate: boolean) {
+export const debounce = (func: Function, wait: number, immediate: boolean) => {
   let timeout: any = null
 
   return (...args: any[]) => {
@@ -11,4 +11,12 @@ export function debounce(func: Function, wait: number, immediate: boolean) {
     timeout = setTimeout(later, wait)
     if (callNow) func(...args)
   }
+}
+
+export const isIntelGPU = () => {
+  const canvas = document.createElement('canvas')
+  const gl = canvas.getContext('webgl') as WebGLRenderingContext
+  const debugInfo = gl.getExtension('WEBGL_debug_renderer_info') as WEBGL_debug_renderer_info
+
+  return gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL).includes('Intel')
 }
