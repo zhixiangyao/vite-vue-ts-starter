@@ -1,6 +1,6 @@
-# Vue 3 + Typescript + Vite + WindiCSS + VueRouter + Vuex
+# Vue 3 + TypeScript + Vite + WindiCSS + VueRouter + Vuex
 
-该模板将帮助您开始在 Vite 中使用 Vue3、Typescript、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue3、TypeScript、WindiCSS 进行开发。
 
 **编辑器:** [VS Code](https://code.visualstudio.com/)
 
