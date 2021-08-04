@@ -1,10 +1,10 @@
 <script lang="tsx">
-import { defineComponent, provide, onMounted, readonly, ref } from 'vue'
+import { defineComponent, provide, readonly, ref } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
 
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
-import { defaultDataKey, Live2dWidget } from '/@/logic'
+import { defaultDataKey } from '/@/provide'
 
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'
@@ -49,24 +49,6 @@ export default defineComponent({
 
     const defaultDataValue = ref('从 default 注入的')
     provide(defaultDataKey, readonly(defaultDataValue))
-
-    onMounted(() => {
-      const height = Math.floor(document?.body?.clientHeight / 3)
-      console.log(document?.body?.clientHeight)
-      Live2dWidget({
-        display: {
-          position: 'right',
-          width: height * 0.7,
-          height,
-          hOffset: 20,
-          vOffset: 20,
-        },
-        react: {
-          opacityDefault: 0.7,
-          opacityOnHover: 0.2,
-        },
-      })
-    })
 
     return () => (
       <>

@@ -22,11 +22,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { isDark, toggleDark } from '/@/logic'
+import { useDark, useToggle } from '@vueuse/core'
 
 export default defineComponent({
   name: 'ToggleButton',
   setup() {
+    const isDark = useDark()
+    const toggleDark = useToggle(isDark)
+
     return { isDark, toggleDark }
   },
 })
