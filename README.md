@@ -1,10 +1,15 @@
-# Vue 3 + TypeScript + Vite + WindiCSS + VueRouter + Vuex
+# Vite + Vue 3 + VueRouter + Vuex + TypeScript + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue3、TypeScript、WindiCSS 进行开发。
+该模板将帮助您开始在 Vite 中使用 Vue3 VueRouter Vuex TypeScript WindiCSS 进行开发。
 
-**编辑器:** [VS Code](https://code.visualstudio.com/)
+**编辑器:**
 
-**插件:** [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)、[Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [VS Code](https://code.visualstudio.com/)
+
+**插件:**
+
+- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 ## 克隆到本地
 
