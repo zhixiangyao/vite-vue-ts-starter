@@ -36,7 +36,7 @@ export default defineComponent({
       window?.L2Dwidget?.init(option)
     }
     onMounted(() => {
-      const height = Math.floor(document?.body?.clientHeight / 3)
+      const height = 200
 
       initLive2dWidget({
         display: {

@@ -1,5 +1,5 @@
 <template>
-  <div id="APlayer" class="absolute" />
+  <div id="APlayer" class="fixed" />
 </template>
 
 <script lang="ts">
