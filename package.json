@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
+    "add:ios": "npm run build && rimraf ios/ && npx cap add ios",
+    "open:ios": "npx cap open ios",
+    "run:ios": "npx cap run ios",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
@@ -13,6 +16,8 @@
     "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "dependencies": {
+    "@capacitor/core": "^3.1.2",
+    "@capacitor/ios": "^3.1.2",
     "@vueuse/core": "^5.2.0",
     "aplayer": "^1.10.1",
     "nprogress": "^0.2.0",
@@ -21,6 +26,7 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@capacitor/cli": "^3.1.2",
     "@types/node": "^16.4.8",
     "@types/nprogress": "^0.2.0",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
@@ -35,6 +41,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.15.0",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
     "sass": "^1.37.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
