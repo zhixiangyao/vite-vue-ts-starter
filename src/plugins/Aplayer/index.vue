@@ -15,7 +15,7 @@ export default {
       const ap = new APlayer({
         container: document.getElementById('APlayer'),
         fixed: false,
-        mini: false,
+        mini: true,
         volume: 0.2,
         theme: '#1da1f2',
         lrcType: 3,

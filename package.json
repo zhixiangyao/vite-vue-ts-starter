@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "add:ios": "npm run build && rimraf ios/ && npx cap add ios",
     "open:ios": "npx cap open ios",
+    "add:ios": "npm run build && rimraf ios/ && npx cap add ios",
     "run:ios": "npx cap run ios",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
