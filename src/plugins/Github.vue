@@ -1,18 +1,12 @@
 <template>
-  <a :href="href" target="_blank" class="github-corner" aria-label="View source on GitHub">
+  <a
+    :href="href"
+    target="_blank"
+    class="github-corner fixed top-0 right-0 z-999"
+    aria-label="View source on GitHub"
+  >
     <svg
-      class="
-        fill-black
-        dark:fill-white dark:text-black
-        text-white
-        w-16
-        h-16
-        absolute
-        top-0
-        right-0
-        z-999
-        border-0
-      "
+      class="fill-black dark:fill-white dark:text-black text-white w-16 h-16 border-0"
       viewBox="0 0 250 250"
       aria-hidden="true"
     >

@@ -8,6 +8,6 @@
   text-align: center;
 }
 
-body,html {
+html {
   @apply overflow-y-scroll overflow-x-hidden;
 }
