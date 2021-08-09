@@ -5,16 +5,10 @@ declare global {
     }
   }
 
-  let $: (selector: string) => any
+  function $(selector: string): any
+  function $(domReadyCallback: () => any): any
 
   const graphql: (query: TemplateStringsArray) => void
-
-  namespace TestNamespace {
-    interface ComponentProps {
-      childre?: {}
-      data?: {}
-    }
-  }
 }
 
 export {}
