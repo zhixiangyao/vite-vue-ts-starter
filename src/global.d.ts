@@ -1,10 +1,20 @@
-interface Window {
-  L2Dwidget: {
-    init: any
+declare global {
+  interface Window {
+    L2Dwidget: {
+      init: any
+    }
+  }
+
+  function $(selector: string): any
+  function $(domReadyCallback: () => any): any
+
+  const graphql: (query: TemplateStringsArray) => void
+}
+
+declare module 'vue' {
+  interface ComponentCustomProperties {
+    nightNightSix: number
   }
 }
 
-declare function $(selector: string): any
-declare function $(domReadyCallback: () => any): any
-
-declare const graphql: (query: TemplateStringsArray) => void
+export {}
