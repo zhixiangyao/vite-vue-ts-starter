@@ -12,27 +12,16 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'GridWithBoxShadow',
-  setup() {
-    return {}
-  },
-})
-</script>
-
 <style lang="scss" scoped>
 .grid {
-  // 行数
+  // row
   --grid-row: 3;
-  // 列数
+  // col
   --grid-col: 3;
   --grid-item-width: 50px;
   --grid-item-height: 50px;
-  --grid-item-border-width: 1px; // 实际的边框长度
-  --grid-item-border-color: black; // 边框颜色
+  --grid-item-border-width: 1px; // real border width
+  --grid-item-border-color: black; // border color
   --grid-item-border-width-half: calc(var(--grid-item-border-width) / 2);
   --grid-item-box-shadow: 0 0 0 var(--grid-item-border-width-half) var(--grid-item-border-color);
 
