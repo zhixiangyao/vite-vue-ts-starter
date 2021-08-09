@@ -14,4 +14,8 @@
 import APlayer from '/@/plugins/Aplayer/index.vue'
 import Github from '/@/plugins/Github.vue'
 import Live2dWidget from '/@/plugins/Live2dWidget.vue'
+
+// type from global.d.ts
+const a: TestNamespace.ComponentProps = {}
+console.log(a)
 </script>
