@@ -3,7 +3,6 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    // --strict === --noImplicitAny, --noImplicitThis, --alwaysStrict, --strictNullChecks, --strictFunctionTypes, --strictPropertyInitialization。
     "strict": true,
     "jsx": "preserve",
     "experimentalDecorators": true,
@@ -16,14 +15,6 @@
     "paths": {
       "/@/*": ["src/*"]
     },
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "customMatcher": "\\.module\\.(c|le|sa|sc)ss$"
-        }
-      }
-    ],
     "lib": ["esnext", "dom"]
   },
   "include": [
