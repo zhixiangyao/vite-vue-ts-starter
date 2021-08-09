@@ -23,9 +23,9 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, defineProps } from 'vue'
-
-defineProps<{ msg: string }>()
+import { ref, withDefaults, defineProps } from 'vue'
 
 const count = ref(0)
+
+withDefaults(defineProps<{ msg: string }>(), { msg: 'withDefaults-value' })
 </script>
