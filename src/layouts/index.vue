@@ -1,6 +1,7 @@
 <script lang="tsx">
 import { defineComponent, provide, readonly, ref } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
+import type { Router } from 'vue-router'
 
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
@@ -9,8 +10,6 @@ import { defaultDataKey } from '/@/provide'
 import Nav from './components/Nav.vue'
 import Main from './components/Main.vue'
 import ToggleButton from './components/ToggleButton.vue'
-
-import type { Router } from '/@/types'
 
 const navbarList = [
   {
