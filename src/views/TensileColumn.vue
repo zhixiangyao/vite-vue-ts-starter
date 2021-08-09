@@ -1,65 +1,63 @@
 <template>
-  <div class="column">
-    <div class="column-left">
-      <div class="resize-bar"></div>
-      <div class="resize-line"></div>
-      <div class="resize-save"> 左侧的内容，左侧的内容，左侧的内容，左侧的内容 </div>
+  <div class="column flex justify-between w-full h-full overflow-hidden">
+    <div class="column-left relative min-w-40 h-[calc(100vh-64px)] bg-red-300">
+      <div class="resize-bar overflow-scroll opacity-0 resize-x" />
+      <div
+        class="
+          resize-line
+          absolute
+          top-0
+          right-0
+          bottom-0
+          pointer-events-none
+          before:absolute
+          before:top-1/2
+          before:left-1/2
+          before:content-·
+          before:flex
+          before:flex-col-reverse
+          before:h-8px
+          before:text-transparent
+        "
+      />
+      <div class="absolute top-0 right-5px left-0 bottom-0 p-16px overflow-x-hidden">
+        {{ '左侧的内容，左侧的内容，左侧的内容，左侧的内容' }}
+      </div>
     </div>
 
-    <div class="column-right"> <GridWithBoxShadow /> </div>
+    <div
+      class="
+        flex
+        items-center
+        justify-center
+        flex-1
+        h-[calc(100vh-64px)]
+        min-w-40
+        p-4
+        bg-blue-300
+        overflow-hidden
+      "
+    >
+      <GridWithBoxShadow />
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, defineAsyncComponent } from 'vue'
+<script lang="ts" setup>
+import { defineAsyncComponent } from 'vue'
 
-export default defineComponent({
-  name: 'TensileColumn',
-  components: {
-    GridWithBoxShadow: defineAsyncComponent(() => import('/@/components/GridWithBoxShadow.vue')),
-  },
-})
+const GridWithBoxShadow = defineAsyncComponent(() => import('/@/components/GridWithBoxShadow.vue'))
 </script>
 
-<style lang="postcss" scoped>
+<style lang="scss" scoped>
 .column {
-  @apply flex justify-between w-full h-full overflow-hidden;
-
   .column-left {
-    height: calc(100vh - 64px);
-
-    @apply relative min-w-40 bg-red-300;
-
-    .resize-save {
-      position: absolute;
-      top: 0;
-      right: 5px;
-      bottom: 0;
-      left: 0;
-      padding: 16px;
-      overflow-x: hidden;
-    }
-
-    /* 拖拽 line */
     .resize-line {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
       border-right: 4px solid gray;
       border-left: 4px solid gray;
-      pointer-events: none;
       transition: border 0.3s ease-in-out;
 
       &::before {
-        content: '·';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        display: flex;
-        flex-direction: column-reverse;
-        height: 8px;
-        color: transparent;
         transform: translate(-50%, -50%) scale(2.5);
         transition: color 0.3s ease-in-out;
       }
@@ -67,11 +65,8 @@ export default defineComponent({
 
     .resize-bar {
       height: inherit;
-      overflow: scroll;
       cursor: ew-resize;
       cursor: col-resize;
-      opacity: 0;
-      resize: horizontal;
 
       &:hover ~ .resize-line {
         border-right: 4px solid black;
@@ -100,12 +95,6 @@ export default defineComponent({
         height: inherit;
       }
     }
-  }
-
-  .column-right {
-    height: calc(100vh - 64px);
-
-    @apply flex items-center justify-center flex-1 p-4 min-w-40 bg-blue-300 overflow-hidden;
   }
 }
 </style>

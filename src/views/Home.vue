@@ -1,17 +1,11 @@
 <template>
-  <HelloWorld :msg="'Vue3 ref proxy reactive data！'" />
+  <HelloWorld :msg="'Vue3 ref proxy reactive data！' + environment" />
 </template>
 
-<script lang="ts">
-import { defineComponent, defineAsyncComponent } from 'vue'
+<script lang="ts" setup>
+import { defineAsyncComponent } from 'vue'
 
-export default defineComponent({
-  name: 'Home',
-  components: {
-    HelloWorld: defineAsyncComponent(() => import('/@/components/HelloWorld.vue')),
-  },
-  setup() {
-    return { environment: import.meta.env?.VITE_APP_NODE_ENV ?? 'undefined' }
-  },
-})
+const HelloWorld = defineAsyncComponent(() => import('/@/components/HelloWorld.vue'))
+
+const environment = import.meta.env?.VITE_APP_NODE_ENV ?? 'undefined'
 </script>
