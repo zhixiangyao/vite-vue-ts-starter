@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+import { defineAsyncComponent } from 'vue'
+
+const GridWithBoxShadow = defineAsyncComponent(() => import('/@/components/GridWithBoxShadow.vue'))
+</script>
+
 <template>
   <div class="column flex justify-between w-full h-full overflow-hidden">
     <div class="column-left relative min-w-40 h-[calc(100vh-64px)] bg-red-300">
@@ -42,12 +48,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { defineAsyncComponent } from 'vue'
-
-const GridWithBoxShadow = defineAsyncComponent(() => import('/@/components/GridWithBoxShadow.vue'))
-</script>
 
 <style lang="scss" scoped>
 .column {

@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+import { toRef, withDefaults, defineProps } from 'vue'
+
+const props = withDefaults(defineProps<{ href: string }>(), { href: '' })
+
+const href = toRef(props, 'href')
+</script>
+
 <template>
   <a
     :href="href"
@@ -25,25 +33,6 @@
     </svg>
   </a>
 </template>
-
-<script lang="ts">
-import { defineComponent, toRef } from 'vue'
-
-export default defineComponent({
-  name: 'Github',
-  props: {
-    href: {
-      type: String,
-      default: '',
-    },
-  },
-  setup(props) {
-    const href = toRef(props, 'href')
-
-    return { href }
-  },
-})
-</script>
 
 <style scoped>
 .github-corner:hover .octo-arm {

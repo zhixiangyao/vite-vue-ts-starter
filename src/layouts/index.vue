@@ -1,7 +1,6 @@
 <script lang="tsx">
 import { defineComponent, provide, readonly, ref } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
-import type { Router } from 'vue-router'
 
 import { useStore } from '/@/store/index'
 import { useCurrentRouteName } from '/@/hooks'
@@ -43,10 +42,10 @@ export default defineComponent({
   name: 'Default',
   setup() {
     const store = useStore()
-    const router: Router = useRouter()
+    const router = useRouter()
     const routeName = useCurrentRouteName()
-
     const defaultDataValue = ref('从 default 注入的')
+
     provide(defaultDataKey, readonly(defaultDataValue))
 
     return () => (
@@ -59,8 +58,7 @@ export default defineComponent({
                 <button
                   key={id}
                   class={[
-                    name === routeName.value && 'dark:bg-gray-700 bg-black ',
-                    name !== routeName.value && `text-gray-300`,
+                    name === routeName.value ? 'dark:bg-gray-700 bg-black ' : `text-gray-300`,
                     'dark:hover:bg-gray-700 hover:bg-black text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
                   ]}
                   onClick={() => router.push({ name })}
