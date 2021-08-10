@@ -9,7 +9,15 @@ import { resolve } from 'path'
  */
 export const userConfig = defineConfig({
   plugins: [
-    vue(),
+    vue({
+      template: {
+        compilerOptions: {
+          // 任何 'ion-' 开头的元素都会被识别为自定义元素
+          // isCustomElement: (tag) => tag.startsWith('ion-'),
+          // ...
+        },
+      },
+    }),
     vueJsx({
       /**
        * options are passed on to @vue/babel-plugin-jsx
