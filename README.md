@@ -16,12 +16,12 @@
 - NodeJs
 - Git
 
-## 克隆到本地
+## Clone
 
 ```shell
 git clone git@github.com:zhixiangyao/vite-vue-ts-starter.git
 cd vite-vue-ts-starter
-pnpm i # 如果没有安装pnpm，请运行：npm install -g pnpm
+pnpm i # 如果没有安装 pnpm, 请运行: npm install -g pnpm
 ```
 
 ## Usage
@@ -40,25 +40,25 @@ pnpm dev
 pnpm build
 ```
 
-### 检查 all
+### Check all
 
 ```shell
 pnpm lint:all
 ```
 
-### 检查 ESlint
+### Check ESlint
 
 ```shell
 pnpm lint:eslint
 ```
 
-### 检查 Prettier
+### Check Prettier
 
 ```shell
 pnpm lint:prettier
 ```
 
-### 检查 Stylelint
+### Check Stylelint
 
 ```shell
 pnpm lint:stylelint
