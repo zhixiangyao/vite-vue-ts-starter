@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { toRef, withDefaults, defineProps } from 'vue'
+import { toRef, withDefaults } from 'vue'
 
 const props = withDefaults(defineProps<{ href: string }>(), { href: '' })
 
