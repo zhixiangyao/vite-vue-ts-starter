@@ -18,7 +18,20 @@
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
     "lint:eslint": "eslint \"{src,mock}/**/*.{vue,ts,tsx}\" --fix",
     "lint:prettier": "prettier --write --loglevel warn \"src/**/*.{js,json,tsx,css,less,scss,vue,html,md}\"",
-    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/"
+    "lint:stylelint": "stylelint --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{vue,ts,tsx}": [
+      "npx eslint --fix"
+    ],
+    "src/**/*.{js,json,tsx,css,less,scss,vue,html,md}": [
+      "npx prettier --write --loglevel warn "
+    ],
+    "src/**/*.{vue,less,postcss,css,scss}": [
+      "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
+    ]
   },
   "dependencies": {
     "@capacitor/core": "^3.2.0",
@@ -44,6 +57,8 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^2.3.2",
     "rimraf": "^3.0.2",
     "sass": "^1.38.2",
