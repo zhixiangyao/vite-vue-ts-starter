@@ -2,6 +2,11 @@
   "name": "vite-vue-ts-starter",
   "version": "0.1.0",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhixiangyao/vite-vue-ts-starter.git"
+  },
+  "homepage": "https://github.com/zhixiangyao/vite-vue-ts-starter",
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
