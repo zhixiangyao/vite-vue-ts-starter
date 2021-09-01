@@ -63,3 +63,37 @@ pnpm lint:prettier
 ```shell
 pnpm lint:stylelint
 ```
+
+### APP
+
+- **配置文件 ./capacitor.config.ts**
+- **ios项目文件 ./ios**
+- **Dependencies**
+
+  ```json
+  "dependencies": {
+    "@capacitor/core": "^3.2.0",
+    "@capacitor/ios": "^3.2.0",
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^3.2.0",
+  },
+  ```
+
+- **Open The Xcode**
+
+```shell
+pnpm open:ios
+```
+
+- **Build IOS APP**
+
+```shell
+pnpm add:ios
+```
+
+- **Run IOS APP**
+
+```shell
+pnpm run:ios
+```
