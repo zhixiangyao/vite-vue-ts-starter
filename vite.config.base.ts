@@ -42,6 +42,7 @@ export const userConfig = defineConfig({
     },
   },
   optimizeDeps: {
-    include: ['vue', 'vue-router', '@vueuse/core'],
+    // include: [],
+    include: ['vue', 'vuex', 'vue-router', 'nprogress', '@vueuse/core'],
   },
 })
