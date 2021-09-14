@@ -11,3 +11,8 @@
 body {
   @apply overflow-y-scroll overflow-x-hidden;
 }
+
+html.dark #app {
+  background: #121212;
+  color: white;
+}
