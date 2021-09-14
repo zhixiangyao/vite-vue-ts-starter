@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-import { onMounted } from 'vue'
-
+<script lang="ts">
 const isIntelGPU = () => {
   const canvas = document.createElement('canvas')
   const gl = canvas.getContext('webgl')!
@@ -14,6 +12,10 @@ const initLive2dWidget = (option: Live2dWidgetOption) => {
 
   window?.L2Dwidget?.init(option)
 }
+</script>
+
+<script lang="ts" setup>
+import { onMounted } from 'vue'
 
 onMounted(() => {
   const height = Math.floor(document?.body?.clientHeight / 3)
