@@ -8,7 +8,6 @@
   "vueIndentScriptAndStyle": false,
   "quoteProps": "as-needed",
   "bracketSpacing": true,
-  "jsxBracketSameLine": false,
   "jsxSingleQuote": false,
   "arrowParens": "always",
   "insertPragma": false,

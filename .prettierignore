@@ -1,9 +1,10 @@
-public
-dist
-dist-ssr
-build
-node_modules
-.husky
+/public/*
+/dist/*
+/dist-ssr/*
+/build/*
+/node_modules/*
+/.husky/*
+/ios/*
 
 package-lock.json
 pnpm-lock.yaml
