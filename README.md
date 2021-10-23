@@ -6,12 +6,12 @@
 
 - [VS Code](https://code.visualstudio.com/)
 
-**插件:**
+**VS Code 插件:**
 
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-**开发环境:**
+**Dev ENV:**
 
 - NodeJs
 - Git
@@ -67,7 +67,7 @@ pnpm lint:stylelint
 ### APP
 
 - **配置文件 ./capacitor.config.ts**
-- **ios项目文件 ./ios**
+- **ios 项目文件 ./ios**
 - **Dependencies**
 
   ```json
