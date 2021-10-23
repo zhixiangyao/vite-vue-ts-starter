@@ -1,13 +1,14 @@
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import WindiCSS from 'vite-plugin-windicss'
 import { resolve } from 'path'
 
+import type { UserConfigExport } from 'vite'
+
 /**
  * https://vitejs.dev/config/
  */
-export const userConfig = defineConfig({
+export const baseConfig: UserConfigExport = {
   plugins: [
     vue({
       template: {
@@ -45,4 +46,4 @@ export const userConfig = defineConfig({
     // include: [],
     include: ['vue', 'vuex', 'vue-router', 'nprogress', '@vueuse/core'],
   },
-})
+}

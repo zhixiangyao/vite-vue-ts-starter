@@ -1,9 +1,10 @@
-import { userConfig } from './vite.config.base'
-import { getEnv, log } from './vite.config.utils'
+import { defineConfig } from 'vite'
+import { baseConfig } from './vite.config.base'
+import { getEnv } from './vite.config.utils'
 
-import type { UserConfigExport } from 'vite'
+import type { ConfigEnv } from 'vite'
 
-export default ({ command, mode }): UserConfigExport => {
+export default ({ command, mode }: ConfigEnv) => {
   /**
    * Such as:
    * import.meta.env.MODE: {string}       app runtime 的模式。
@@ -15,15 +16,15 @@ export default ({ command, mode }): UserConfigExport => {
   const { VITE_APP_NODE_ENV, VITE_APP_TITLE } = getEnv(mode)
 
   setTimeout(() => {
-    log()
-    log('\x1b[33m%s\x1b[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    log('\x1b[36m%s\x1b[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
-    log()
+    console.log()
+    console.log('\x1b[33m%s\x1b[0m', `🏭--NODE 环境 (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+    console.log('\x1b[36m%s\x1b[0m', `🏠--APP 标题 (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+    console.log()
   }, 66)
 
   if (command === 'serve') {
-    return userConfig
+    return defineConfig({ ...baseConfig })
   } else {
-    return userConfig
+    return defineConfig({ ...baseConfig })
   }
 }

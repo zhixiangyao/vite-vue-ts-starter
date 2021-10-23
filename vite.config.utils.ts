@@ -19,5 +19,3 @@ export const getEnv = (mode: string): ENV => {
     }
   }
 }
-
-export const { log } = console
