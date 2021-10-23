@@ -11,7 +11,7 @@
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-**Dev ENV:**
+**开发环境:**
 
 - NodeJs
 - Git
