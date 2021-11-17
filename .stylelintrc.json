@@ -1,7 +1,7 @@
 {
   "root": true,
   "plugins": ["stylelint-order"],
-  "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+  "extends": ["stylelint-config-standard", "stylelint-config-prettier", "stylelint-config-recommended-vue"],
   "rules": {
     "selector-pseudo-class-no-unknown": [
       true,
