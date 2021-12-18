@@ -9,22 +9,7 @@ const GridWithBoxShadow = defineAsyncComponent(() => import('/@/components/GridW
     <div class="column-left relative min-w-40 h-[calc(100vh-64px)] bg-red-300">
       <div class="resize-bar overflow-scroll opacity-0 resize-x" />
       <div
-        class="
-          resize-line
-          absolute
-          top-0
-          right-0
-          bottom-0
-          pointer-events-none
-          before:absolute
-          before:top-1/2
-          before:left-1/2
-          before:content-·
-          before:flex
-          before:flex-col-reverse
-          before:h-8px
-          before:text-transparent
-        "
+        class="resize-line absolute top-0 right-0 bottom-0 pointer-events-none before:absolute before:top-1/2 before:left-1/2 before:content-· before:flex before:flex-col-reverse before:h-8px before:text-transparent"
       />
       <div class="absolute top-0 right-5px left-0 bottom-0 p-16px overflow-x-hidden">
         {{ '左侧的内容，左侧的内容，左侧的内容，左侧的内容' }}
@@ -32,17 +17,7 @@ const GridWithBoxShadow = defineAsyncComponent(() => import('/@/components/GridW
     </div>
 
     <div
-      class="
-        flex
-        items-center
-        justify-center
-        flex-1
-        h-[calc(100vh-64px)]
-        min-w-40
-        p-4
-        bg-blue-300
-        overflow-hidden
-      "
+      class="flex items-center justify-center flex-1 h-[calc(100vh-64px)] min-w-40 p-4 bg-blue-300 overflow-hidden"
     >
       <GridWithBoxShadow />
     </div>

@@ -3,18 +3,7 @@
     <div>{{ msg }}</div>
 
     <button
-      class="
-        my-4
-        py-2
-        px-4
-        bg-indigo-500
-        text-white
-        font-semibold
-        rounded-lg
-        shadow-md
-        hover:bg-indigo-700
-        focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75
-      "
+      class="my-4 py-2 px-4 bg-indigo-500 text-white font-semibold rounded-lg shadow-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75"
       @click="count++"
     >
       count is: {{ count }}
