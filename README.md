@@ -1,17 +1,17 @@
 # Vite + Vue 3 + VueRouter + Vuex + TypeScript + WindiCSS
 
-该模板将帮助您开始在 Vite 中使用 Vue3 VueRouter Vuex TypeScript WindiCSS 进行开发。
+This template will help you start developing with Vue3 VueRouter Vuex TypeScript WindiCSS in Vite.
 
-**编辑器:**
+**Editor:**
 
-- [VS Code](https://code.visualstudio.com/)
+- [VSCode](https://code.visualstudio.com/)
 
-**VS Code 插件:**
+**VSCode extension:**
 
 - [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-**开发环境:**
+**Development ENV:**
 
 - NodeJs
 - Git
@@ -21,14 +21,14 @@
 ```shell
 git clone git@github.com:zhixiangyao/vite-vue-ts-starter.git
 cd vite-vue-ts-starter
-pnpm i # 如果没有安装 pnpm, 请运行: npm install -g pnpm
+pnpm i # If not install pnpm, please run: npm install -g pnpm
 ```
 
 ## Usage
 
 ### Development
 
-只需运行并访问 http://localhost:3000
+click it http://localhost:3000
 
 ```shell
 pnpm dev
@@ -66,8 +66,8 @@ pnpm lint:stylelint
 
 ### APP
 
-- **配置文件 ./capacitor.config.ts**
-- **ios 项目文件 ./ios**
+- **Config file ./capacitor.config.ts**
+- **IOS project file ./ios**
 - **Dependencies**
 
   ```json
