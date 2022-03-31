@@ -6,12 +6,16 @@ import { defaultDataKey } from '/@/provide'
 import Father from '/@/components/Father.vue'
 import Child from '/@/components/Child.vue'
 
+const handleClick = (msg: string, event: MouseEvent) => {
+  console.log(msg, event)
+}
+
 function FatherChild() {
   const defaultDataValue = inject(defaultDataKey)
 
   return () => (
     <>
-      <p>Provide-Inject: {defaultDataValue?.value}</p>
+      <p onClick={(event) => handleClick('hi', event)}>Provide-Inject: {defaultDataValue?.value}</p>
 
       <Father
         msg="Father"
