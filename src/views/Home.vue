@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld :msg="'Vue3 ref proxy reactive data！' + (environment as string)" />
+  <HelloWorld :msg="'Vue3 ref proxy reactive data！' + environment" />
 </template>
 
 <script lang="ts" setup>
