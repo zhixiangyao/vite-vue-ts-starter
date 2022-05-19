@@ -2,7 +2,7 @@
 import { defineComponent, provide, readonly, ref } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
 
-import { useStore } from '/@/store/index'
+import { useAppStore } from '/@/stores'
 import { useCurrentRouteName } from '/@/hooks'
 import { defaultDataKey } from '/@/provide'
 
@@ -41,7 +41,7 @@ const navbarList = [
 export default defineComponent({
   name: 'Default',
   setup() {
-    const store = useStore()
+    const appStore = useAppStore()
     const router = useRouter()
     const routeName = useCurrentRouteName()
     const defaultDataValue = ref('从 default 注入的')
@@ -52,7 +52,7 @@ export default defineComponent({
       <>
         <Nav
           v-slots={{
-            title: () => `${store.state.title}`,
+            title: () => `${appStore.getTitle}`,
             default: () =>
               navbarList.map(({ id, label, name }) => (
                 <button

@@ -42,8 +42,5 @@ export const baseConfig: UserConfigExport = {
       localsConvention: 'camelCaseOnly',
     },
   },
-  optimizeDeps: {
-    // include: [],
-    include: ['vue', 'vuex', 'vue-router', 'nprogress', '@vueuse/core'],
-  },
+  optimizeDeps: {},
 }

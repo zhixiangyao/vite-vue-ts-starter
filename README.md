@@ -1,6 +1,6 @@
-# Vite + Vue 3 + VueRouter + Vuex + TypeScript + WindiCSS
+# Vite + Vue 3 + VueRouter + Pinia + TypeScript + WindiCSS
 
-This template will help you start developing with Vue3 VueRouter Vuex TypeScript WindiCSS in Vite.
+This template will help you start developing with Vue3 VueRouter Pinia TypeScript WindiCSS in Vite.
 
 **Editor:**
 

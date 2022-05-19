@@ -39,9 +39,9 @@
     "@vueuse/core": "^8.5.0",
     "aplayer": "^1.10.1",
     "nprogress": "^0.2.0",
+    "pinia": "^2.0.14",
     "vue": "^3.2.34",
-    "vue-router": "^4.0.15",
-    "vuex": "^4.0.2"
+    "vue-router": "^4.0.15"
   },
   "devDependencies": {
     "@capacitor/cli": "^3.5.1",
