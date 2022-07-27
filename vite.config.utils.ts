@@ -5,17 +5,16 @@ interface ENV {
   [K: string]: string
 }
 
-export const getEnv = (mode: string): ENV => {
-  const envFiles = [`.env.${mode}`]
+export const getEnv = (mode: string) => {
+  const envFileName = `.env.${mode}`
+  const envObject = Object.create(null) as ENV
 
-  for (const envFile of envFiles) {
-    try {
-      const env = Object.create(null)
-      const envConfig = dotenv.parse(fs.readFileSync(envFile))
-      for (const k in envConfig) Object.assign(env, { [k]: envConfig[k] })
-      return env
-    } catch (error) {
-      console.error(error)
-    }
+  try {
+    const envConfig = dotenv.parse(fs.readFileSync(envFileName))
+    for (const k in envConfig) Object.assign(envObject, { [k]: envConfig[k] })
+    return envObject
+  } catch (error) {
+    console.error(error)
+    return envObject
   }
 }
