@@ -9,7 +9,7 @@
   "homepage": "https://github.com/zhixiangyao/vite-vue-ts-starter",
   "scripts": {
     "dev": "vite --host",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "add:ios": "npm run build && rimraf ios/ && npx cap add ios",
     "open:ios": "npx cap open ios",
     "run:ios": "npx cap run ios",
