@@ -4,7 +4,7 @@ import { defineComponent, renderSlot, useSlots } from 'vue'
 import { useAppStore } from '/@/stores'
 
 export default defineComponent({
-  name: 'Nav',
+  name: 'Navigation',
   setup() {
     const slots = useSlots()
     const appStore = useAppStore()

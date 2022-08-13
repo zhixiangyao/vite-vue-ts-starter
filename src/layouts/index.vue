@@ -6,7 +6,7 @@ import { useAppStore } from '/@/stores'
 import { useCurrentRouteName } from '/@/hooks'
 import { defaultDataKey } from '/@/provide'
 
-import Nav from './components/Nav.vue'
+import Navigation from './components/Navigation.vue'
 import Main from './components/Main.vue'
 import ToggleButton from './components/ToggleButton.vue'
 
@@ -50,7 +50,7 @@ export default defineComponent({
 
     return () => (
       <>
-        <Nav
+        <Navigation
           v-slots={{
             title: () => `${appStore.getTitle}`,
             default: () =>
