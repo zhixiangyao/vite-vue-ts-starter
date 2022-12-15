@@ -37,7 +37,6 @@
     "@capacitor/core": "^4.6.1",
     "@capacitor/ios": "^4.6.1",
     "@vueuse/core": "^9.6.0",
-    "aplayer": "^1.10.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
