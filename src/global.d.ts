@@ -1,24 +1,4 @@
 declare global {
-  interface Live2dWidgetOption {
-    display?: {
-      position?: 'right' | 'top' | 'left' | 'bottom'
-      width?: number
-      height?: number
-      hOffset?: number
-      vOffset?: number
-    }
-    react?: {
-      opacityDefault?: number
-      opacityOnHover?: number
-    }
-  }
-
-  interface Window {
-    L2Dwidget: {
-      init: (option: Live2dWidgetOption) => void
-    }
-  }
-
   /**
    * https://vitejs.dev/guide/env-and-mode.html#intellisense-for-typescript
    *

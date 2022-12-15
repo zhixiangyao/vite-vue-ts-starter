@@ -2,7 +2,6 @@
 import { defineComponent, Teleport } from 'vue'
 import { RouterView } from 'vue-router'
 import Github from '/@/plugins/Github.vue'
-import Live2dWidget from '/@/plugins/Live2dWidget.vue'
 
 function App() {
   return () => (
@@ -10,8 +9,6 @@ function App() {
       <RouterView />
 
       <Teleport to="#global-components">
-        <Live2dWidget />
-
         <Github class="hidden xl:block" href="https://github.com/zhixiangyao/vite-vue-ts-starter" />
       </Teleport>
     </>
