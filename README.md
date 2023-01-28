@@ -8,7 +8,8 @@ This template will help you start developing with Vue3 VueRouter Pinia TypeScrip
 
 **VSCode extension:**
 
-- [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
+- [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin)
+- [Vue Language Features (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 **Development ENV:**
