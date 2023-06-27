@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { toRef, withDefaults } from 'vue'
+import { toRef } from 'vue'
 
 const props = withDefaults(defineProps<{ href: string }>(), { href: '' })
 
@@ -56,7 +56,7 @@ const href = toRef(props, 'href')
   }
 }
 
-@media (max-width: 500px) {
+@media (width <= 500px) {
   .github-corner:hover .octo-arm {
     animation: none;
   }

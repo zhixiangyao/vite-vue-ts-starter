@@ -14,8 +14,8 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
-    "types": ["vite/client", "node", "web-bluetooth"],
-    "typeRoots": ["./node_modules/@types/"],
+    "types": ["client.d.ts", "node", "web-bluetooth"],
+    "typeRoots": ["./node_modules/@types/", "./node_modules/vite/"],
     "baseUrl": ".",
     "paths": {
       "/@/*": ["src/*"]
