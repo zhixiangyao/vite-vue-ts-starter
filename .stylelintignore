@@ -1,6 +1,5 @@
 /dist/*
 /dist-ssr/*
-/ios/*
 /public/*
 /.vscode/*
 /node_modules/*

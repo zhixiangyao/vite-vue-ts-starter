@@ -10,9 +10,6 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc && vite build",
-    "add:ios": "npm run build && rimraf ios/ && npx cap add ios",
-    "open:ios": "npx cap open ios",
-    "run:ios": "npx cap run ios",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint:all": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
@@ -34,8 +31,6 @@
     ]
   },
   "dependencies": {
-    "@capacitor/core": "^5.0.5",
-    "@capacitor/ios": "^5.0.5",
     "@vueuse/core": "^10.2.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.4",
@@ -43,7 +38,6 @@
     "vue-router": "^4.2.2"
   },
   "devDependencies": {
-    "@capacitor/cli": "^5.0.5",
     "@types/node": "^20.3.2",
     "@types/nprogress": "^0.2.0",
     "@types/web-bluetooth": "^0.0.17",

@@ -64,37 +64,3 @@ pnpm lint:prettier
 ```shell
 pnpm lint:stylelint
 ```
-
-### APP
-
-- **Config file ./capacitor.config.ts**
-- **IOS project file ./ios**
-- **Dependencies**
-
-  ```json
-  "dependencies": {
-    "@capacitor/core": "^3.2.0",
-    "@capacitor/ios": "^3.2.0",
-  },
-  "devDependencies": {
-    "@capacitor/cli": "^3.2.0",
-  },
-  ```
-
-- **Open The Xcode**
-
-```shell
-pnpm open:ios
-```
-
-- **Build IOS APP**
-
-```shell
-pnpm add:ios
-```
-
-- **Run IOS APP**
-
-```shell
-pnpm run:ios
-```
