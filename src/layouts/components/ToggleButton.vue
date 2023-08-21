@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { useDark, useToggle } from '/@/hooks'
 
+defineOptions({ name: 'ToggleButton' })
+
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 </script>
