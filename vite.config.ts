@@ -1,8 +1,70 @@
 import { defineConfig } from 'vite'
-import { baseConfig } from './vite.config.base'
-import { getEnv } from './vite.config.utils'
+import type { UserConfigExport, ConfigEnv } from 'vite'
+import { resolve } from 'path'
+import fs from 'fs'
+import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将 env 变量中的变量从 '.env*' file 提取出来
 
-import type { ConfigEnv } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
+import WindiCSS from 'vite-plugin-windicss'
+
+interface ENV {
+  [K: string]: string
+}
+
+const getEnv = (mode: string) => {
+  const envFileName = `.env.${mode}`
+  const envObject = Object.create(null) as ENV
+
+  try {
+    const envConfig = dotenv.parse(fs.readFileSync(envFileName))
+    for (const k in envConfig) Object.assign(envObject, { [k]: envConfig[k] })
+    return envObject
+  } catch (error) {
+    console.error(error)
+    return envObject
+  }
+}
+
+/**
+ * https://vitejs.dev/config/
+ */
+const baseConfig: UserConfigExport = {
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          // 任何 'ion-' 开头的元素都会被识别为自定义元素
+          // isCustomElement: (tag) => tag.startsWith('ion-'),
+          // ...
+        },
+      },
+    }),
+    vueJsx({
+      /**
+       * options are passed on to @vue/babel-plugin-jsx
+       * https://github.com/vuejs/jsx-next/blob/dev/packages/babel-plugin-jsx/README-zh_CN.md
+       */
+      optimize: true,
+      enableObjectSlots: true,
+    }),
+    WindiCSS(),
+  ],
+  resolve: {
+    alias: [
+      {
+        find: '/@',
+        replacement: resolve(__dirname, './src'),
+      },
+    ],
+  },
+  css: {
+    modules: {
+      localsConvention: 'camelCaseOnly',
+    },
+  },
+  optimizeDeps: {},
+}
 
 export default ({ command, mode }: ConfigEnv) => {
   /**
