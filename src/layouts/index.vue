@@ -58,8 +58,8 @@ export default defineComponent({
                 <button
                   key={id}
                   class={[
-                    name === routeName.value ? 'bg-gray-700' : `text-gray-300`,
-                    'button hover:bg-black text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
+                    name === routeName.value && 'activated',
+                    'button text-white flex-shrink-0 px-3 py-2 rounded-md text-sm font-medium',
                   ]}
                   onClick={() => router.push({ name })}
                 >
@@ -80,7 +80,19 @@ export default defineComponent({
 </script>
 
 <style scoped>
+.button {
+  @apply hover:bg-black;
+}
+
+.button.activated {
+  @apply bg-black;
+}
+
 html.dark .button {
-  @apply bg-black hover:bg-gray-700;
+  @apply hover:bg-gray-700;
+}
+
+html.dark .button.activated {
+  @apply bg-gray-700;
 }
 </style>
