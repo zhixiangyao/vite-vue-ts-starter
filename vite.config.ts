@@ -6,7 +6,6 @@ import dotenv from 'dotenv' // Dotenv 是一个零依赖的模块，它能将 en
 
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import WindiCSS from 'vite-plugin-windicss'
 
 interface ENV {
   [K: string]: string
@@ -48,7 +47,6 @@ const baseConfig: UserConfigExport = {
       optimize: true,
       enableObjectSlots: true,
     }),
-    WindiCSS(),
   ],
   resolve: {
     alias: [

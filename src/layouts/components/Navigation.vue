@@ -10,7 +10,7 @@ export default defineComponent({
     const appStore = useAppStore()
 
     return () => (
-      <nav class="nav bg-gray-700 dark:bg-black fixed top-0 left-0 w-screen z-10">
+      <nav class="nav bg-gray-700 fixed top-0 left-0 w-screen z-10">
         <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
           <div class="relative flex items-center justify-between h-16 overflow-x-auto overflow-y-hidden">
             <div
@@ -40,5 +40,9 @@ export default defineComponent({
 <style scoped>
 .nav {
   padding-top: env(safe-area-inset-top);
+}
+
+html.dark .nav {
+  @apply bg-black;
 }
 </style>

@@ -1,5 +1,11 @@
 <template>
-  <main class="flex flex-col justify-center items-center dark:bg-black min-h-screen pt-16">
+  <main class="layout flex flex-col justify-center items-center min-h-screen pt-16">
     <slot name="default" />
   </main>
 </template>
+
+<style scoped>
+html.dark .layout {
+  @apply bg-black;
+}
+</style>

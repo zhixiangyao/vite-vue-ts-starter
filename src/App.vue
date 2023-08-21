@@ -9,7 +9,7 @@ function App() {
       <RouterView />
 
       <Teleport to="#global-components">
-        <Github class="hidden xl:block" href="https://github.com/zhixiangyao/vite-vue-ts-starter" />
+        <Github class="xl:block" href="https://github.com/zhixiangyao/vite-vue-ts-starter" />
       </Teleport>
     </>
   )

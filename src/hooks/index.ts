@@ -1,3 +1,3 @@
-export { useEmitter } from './useEmitter'
-export { useCurrentRouteName } from './useCurrentRouteName'
-export { useDark } from './useDark'
+export * from './useEmitter'
+export * from './useCurrentRouteName'
+export * from './useDark'

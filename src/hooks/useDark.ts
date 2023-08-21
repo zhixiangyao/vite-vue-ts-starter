@@ -1,6 +1,6 @@
-import { watchEffect, ref } from 'vue'
+import { ref, watchEffect, type Ref } from 'vue'
 
-export function useDark() {
+const useDark = () => {
   const htmlClassList = document.documentElement.classList
 
   const isDark = ref(htmlClassList.contains('dark'))
@@ -15,3 +15,11 @@ export function useDark() {
 
   return isDark
 }
+
+const useToggle = (e: Ref<boolean>) => {
+  return () => {
+    e.value = !e.value
+  }
+}
+
+export { useDark, useToggle }

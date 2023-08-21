@@ -10,11 +10,11 @@ const href = toRef(props, 'href')
   <a
     :href="href"
     target="_blank"
-    class="github-corner fixed top-0 right-0 z-999"
+    class="github-corner fixed top-0 right-0 z-50"
     aria-label="View source on GitHub"
   >
     <svg
-      class="fill-black dark:fill-white dark:text-black text-white w-16 h-16 border-0"
+      :class="['svg fill-black text-white w-16 h-16 border-0']"
       viewBox="0 0 250 250"
       aria-hidden="true"
     >
@@ -37,6 +37,10 @@ const href = toRef(props, 'href')
 <style scoped>
 .github-corner:hover .octo-arm {
   animation: octocat-wave 560ms ease-in-out;
+}
+
+html.dark .svg {
+  @apply fill-white text-black;
 }
 
 @keyframes octocat-wave {
