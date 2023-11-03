@@ -1,5 +1,5 @@
 <script lang="tsx">
-import { defineComponent, provide, readonly, ref } from 'vue'
+import { Teleport, defineComponent, provide, readonly, ref } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
 
 import { useAppStore } from '/@/stores'
@@ -9,6 +9,7 @@ import { defaultDataKey } from '/@/provide'
 import Navigation from './components/Navigation.vue'
 import Main from './components/Main.vue'
 import ToggleButton from './components/ToggleButton.vue'
+import Github from './components/Github.vue'
 
 const navbarList = [
   {
@@ -73,6 +74,10 @@ export default defineComponent({
         <Main>
           <RouterView />
         </Main>
+
+        <Teleport to="#global-components">
+          <Github class="xl:block" href="https://github.com/zhixiangyao/vite-vue-ts-starter" />
+        </Teleport>
       </>
     )
   },
