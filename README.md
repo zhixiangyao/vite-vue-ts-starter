@@ -44,7 +44,7 @@ pnpm build
 ### Check all
 
 ```shell
-pnpm lint:all
+pnpm lint
 ```
 
 ### Check ESlint
