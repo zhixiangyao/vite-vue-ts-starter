@@ -21,13 +21,13 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "src/**/*.{json,ts,tsx,css,vue,html,md}": [
+    "./**/*.{json,ts,tsx,css,vue,html,md}": [
       "npx prettier --cache --write --log-level warn"
     ],
-    "src/**/*.{vue,ts,tsx}": [
+    "./**/*.{vue,ts,tsx}": [
       "npx eslint --fix --cache --cache-location node_modules/.cache/eslint/"
     ],
-    "src/**/*.{vue,postcss,css}": [
+    "./**/*.{vue,postcss,css}": [
       "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
     ]
   },
