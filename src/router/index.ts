@@ -26,11 +26,6 @@ const routes: RouteRecordRaw[] = [
         component: () => import('/@/views/Tailwind/index.vue'),
       },
       {
-        path: 'TensileColumn',
-        name: 'TensileColumn',
-        component: () => import('/@/views/TensileColumn.vue'),
-      },
-      {
         path: 'Particle',
         name: 'Particle',
         component: () => import('/@/views/Particle.vue'),

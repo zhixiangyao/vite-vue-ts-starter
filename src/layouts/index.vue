@@ -28,11 +28,6 @@ const navbarList = [
     name: 'Tailwind',
   },
   {
-    id: 4,
-    label: 'TensileColumn',
-    name: 'TensileColumn',
-  },
-  {
     id: 5,
     label: 'Particle',
     name: 'Particle',
