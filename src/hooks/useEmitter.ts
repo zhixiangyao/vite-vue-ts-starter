@@ -145,7 +145,7 @@ class Emitter {
       4,
       true,
     )
-    this.canvas && this.canvas.addEventListener('mousemove', debouncedPop, false)
+    this.canvas?.addEventListener('mousemove', debouncedPop, false)
   }
 
   private reset(): void {
