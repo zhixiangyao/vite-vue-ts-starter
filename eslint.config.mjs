@@ -72,7 +72,6 @@ export default [
       '@typescript-eslint/ban-types': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
@@ -83,6 +82,7 @@ export default [
 
       'no-use-before-define': 'off',
       'space-before-function-paren': 'off',
+
       'vue/custom-event-name-casing': 'off',
       'vue/attributes-order': 'off',
       'vue/one-component-per-file': 'off',
