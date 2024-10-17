@@ -1,6 +1,7 @@
 <script lang="tsx">
 import { Teleport, defineComponent, provide, readonly, ref } from 'vue'
 import { RouterView, useRouter } from 'vue-router'
+import { storeToRefs } from 'pinia'
 
 import { useAppStore } from '/@/stores'
 import { useCurrentRouteName } from '/@/hooks'
@@ -38,6 +39,7 @@ export default defineComponent({
   name: 'Default',
   setup() {
     const appStore = useAppStore()
+    const { getTitle } = storeToRefs(appStore)
     const router = useRouter()
     const routeName = useCurrentRouteName()
     const defaultDataValue = ref('从 default 注入的')
@@ -48,7 +50,7 @@ export default defineComponent({
       <>
         <Navigation
           v-slots={{
-            title: () => `${appStore.getTitle}`,
+            title: () => `${getTitle.value}`,
             default: () =>
               navbarList.map(({ id, label, name }) => (
                 <button
