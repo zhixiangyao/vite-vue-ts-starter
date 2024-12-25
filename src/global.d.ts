@@ -16,6 +16,10 @@ declare module 'vue' {
   interface ComponentCustomProperties {
     nightNightSix: number
   }
+
+  interface GlobalComponents {
+    RouterView: typeof import('vue-router')['RouterView']
+  }
 }
 
 export {}
