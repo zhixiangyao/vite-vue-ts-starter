@@ -1,30 +1,29 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "ESNext",
-    "moduleDetection": "force",
-    "moduleResolution": "Bundler",
-    "allowJs": false,
-    "skipLibCheck": true,
-    "strict": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "moduleDetection": "force",
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "types": ["client.d.ts", "node"],
-    "typeRoots": ["./node_modules/@types/", "./node_modules/vite/"],
     "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "paths": {
       "/@/*": ["src/*"]
     },
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types/", "./node_modules/vite/"],
+    "types": ["client.d.ts", "node"],
+    "allowJs": false,
+    "strict": true,
+    "noEmit": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
   },
   "include": ["./src"],
   "exclude": ["node_modules", "*.js"]
 }
- 

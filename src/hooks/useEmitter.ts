@@ -1,6 +1,6 @@
-import { ref, onMounted } from 'vue'
-
 import type { Ref } from 'vue'
+
+import { onMounted, ref } from 'vue'
 
 import { debounce } from '/@/utils'
 
@@ -62,12 +62,12 @@ class Emitter {
 
     for (let i = 0; i < this.particles.length; i++) {
       if (
-        !popped &&
-        this.particles[i].size > this.sizeLimit &&
-        this.particles[i].x - this.particles[i].size < x &&
-        this.particles[i].y - this.particles[i].size < y &&
-        this.particles[i].x + this.particles[i].size > x &&
-        this.particles[i].y + this.particles[i].size > y
+        !popped
+        && this.particles[i].size > this.sizeLimit
+        && this.particles[i].x - this.particles[i].size < x
+        && this.particles[i].y - this.particles[i].size < y
+        && this.particles[i].x + this.particles[i].size > x
+        && this.particles[i].y + this.particles[i].size > y
       ) {
         this.particles[i].size = this.particles[i].size / 2
         this.particles[i].h = this.particles[i].h + Math.random() * 60 - 30
@@ -108,19 +108,20 @@ class Emitter {
   }
 
   private draw(): void {
-    if (this.canvasContext === null) throw new Error('canvasContext 不能为 null')
+    if (this.canvasContext === null)
+      throw new Error('canvasContext 不能为 null')
 
     this.canvasContext.clearRect(0, 0, 600, 600)
 
     for (let i = 0; i < this.particles.length; i++) {
-      this.canvasContext.fillStyle =
-        'hsl(' +
-        this.particles[i].h +
-        ', ' +
-        this.particles[i].s +
-        '%, ' +
-        this.particles[i].l +
-        '%)'
+      this.canvasContext.fillStyle
+        = `hsl(${
+          this.particles[i].h
+        }, ${
+          this.particles[i].s
+        }%, ${
+          this.particles[i].l
+        }%)`
       this.canvasContext.beginPath()
       this.canvasContext.arc(
         this.particles[i].x,

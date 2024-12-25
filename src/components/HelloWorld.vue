@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+import { ref } from 'vue'
+
+withDefaults(defineProps<{ msg: string }>(), { msg: 'withDefaults-value' })
+
+const count = ref(0)
+</script>
+
 <template>
   <div class="flex flex-col items-center">
     <div>{{ msg }}</div>
@@ -10,11 +18,3 @@
     </button>
   </div>
 </template>
-
-<script lang="ts" setup>
-import { ref } from 'vue'
-
-const count = ref(0)
-
-withDefaults(defineProps<{ msg: string }>(), { msg: 'withDefaults-value' })
-</script>

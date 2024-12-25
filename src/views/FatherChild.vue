@@ -1,12 +1,12 @@
 <script lang="tsx">
 import { defineComponent, inject } from 'vue'
 
-import { defaultDataKey } from '/@/provide'
-
-import Father from '/@/components/Father.vue'
 import Child from '/@/components/Child.vue'
 
-const handleClick = (msg: string, event: MouseEvent) => {
+import Father from '/@/components/Father.vue'
+import { defaultDataKey } from '/@/provide'
+
+function handleClick(msg: string, event: MouseEvent) {
   console.log(msg, event)
 }
 
@@ -15,7 +15,10 @@ function FatherChild() {
 
   return () => (
     <>
-      <p onClick={(event) => handleClick('hi', event)}>Provide-Inject: {defaultDataValue?.value}</p>
+      <p onClick={event => handleClick('hi', event)}>
+        Provide-Inject:
+        {defaultDataValue?.value}
+      </p>
 
       <Father
         msg="Father"

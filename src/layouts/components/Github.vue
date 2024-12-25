@@ -14,7 +14,7 @@ const href = toRef(props, 'href')
     aria-label="View source on GitHub"
   >
     <svg
-      :class="['svg fill-black text-white w-16 h-16 border-0']"
+      class="svg fill-black text-white w-16 h-16 border-0"
       viewBox="0 0 250 250"
       aria-hidden="true"
     >

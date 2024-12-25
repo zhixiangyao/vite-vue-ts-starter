@@ -1,17 +1,17 @@
-import { defineConfig } from 'vite'
-import type { UserConfigExport, ConfigEnv } from 'vite'
-import { resolve } from 'path'
-import fs from 'fs'
-import dotenv from 'dotenv' // Dotenv is a zero-dependency module that extracts the variables in the env variable from the '.env*' file
-
+import type { ConfigEnv, UserConfigExport } from 'vite'
+import fs from 'node:fs'
+import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
+
+import dotenv from 'dotenv' // Dotenv is a zero-dependency module that extracts the variables in the env variable from the '.env*' file
+import { defineConfig } from 'vite'
 
 interface ENV {
   [K: string]: string
 }
 
-const getEnv = (mode: string) => {
+function getEnv(mode: string) {
   const envFileName = `.env.${mode}`
   const envObject = Object.create(null) as ENV
 
@@ -19,7 +19,8 @@ const getEnv = (mode: string) => {
     const envConfig = dotenv.parse(fs.readFileSync(envFileName))
     for (const k in envConfig) Object.assign(envObject, { [k]: envConfig[k] })
     return envObject
-  } catch (error) {
+  }
+  catch (error) {
     console.error(error)
     return envObject
   }
@@ -69,14 +70,15 @@ export default ({ command, mode }: ConfigEnv) => {
 
   setTimeout(() => {
     console.log()
-    console.log('\x1b[33m%s\x1b[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-    console.log('\x1b[36m%s\x1b[0m', `🏠--APP TITLE (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
+    console.log('\x1B[33m%s\x1B[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
+    console.log('\x1B[36m%s\x1B[0m', `🏠--APP TITLE (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
     console.log()
   }, 66)
 
   if (command === 'serve') {
     return defineConfig({ ...baseConfig })
-  } else {
+  }
+  else {
     return defineConfig({ ...baseConfig })
   }
 }

@@ -46,7 +46,10 @@ export default defineComponent({
 
     return () => (
       <>
-        <p>Slot-Prop: {slotProp.value}</p>
+        <p>
+          Slot-Prop:
+          {slotProp.value}
+        </p>
         <div class="bg-blue-600 text-white p-2">{msg.value}</div>
       </>
     )
