@@ -13,22 +13,20 @@
     "build": "vue-tsc && vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
-    "lint": "npm run lint:eslint && npm run lint:prettier && npm run lint:stylelint",
-    "lint:eslint": "eslint --fix \"./**/*.{vue,ts,tsx}\" --cache --cache-location node_modules/.cache/eslint/",
-    "lint:prettier": "prettier --cache --write --log-level warn \"./**/*.{json,ts,tsx,css,vue,html,md}\"",
+    "lint": "eslint --cache --cache-location node_modules/.cache/eslint/",
     "lint:stylelint": "stylelint --fix \"./**/*.{vue,postcss,css}\" --cache --cache-location node_modules/.cache/stylelint/",
     "lint-staged": "lint-staged",
-    "prepare": "husky"
+    "postinstall": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
-    "./**/*.{json,ts,tsx,css,vue,html,md}": [
-      "npx prettier --cache --write --log-level warn"
-    ],
-    "./**/*.{vue,ts,tsx}": [
-      "npx eslint --fix --cache --cache-location node_modules/.cache/eslint/"
+    "*": [
+      "eslint --cache --cache-location node_modules/.cache/eslint/"
     ],
     "./**/*.{vue,postcss,css}": [
-      "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
+      "stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
     ]
   },
   "dependencies": {
@@ -38,27 +36,21 @@
     "vue-router": "4.5.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "3.2.0",
-    "@eslint/js": "9.16.0",
+    "@antfu/eslint-config": "^3.12.1",
     "@types/node": "22.10.2",
     "@types/nprogress": "0.2.3",
-    "@typescript-eslint/eslint-plugin": "8.18.0",
-    "@typescript-eslint/parser": "8.18.0",
+    "@typescript-eslint/eslint-plugin": "8.18.2",
     "@vitejs/plugin-vue": "5.2.1",
     "@vitejs/plugin-vue-jsx": "4.1.1",
     "@vue/compiler-sfc": "3.5.13",
     "autoprefixer": "10.4.20",
     "dotenv": "16.4.7",
-    "eslint": "9.16.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "eslint-plugin-vue": "9.32.0",
+    "eslint": "9.17.0",
     "globals": "15.13.0",
-    "husky": "9.1.7",
     "lint-staged": "15.2.11",
     "postcss-html": "1.7.0",
     "postcss-load-config": "6.0.1",
-    "prettier": "3.4.2",
+    "simple-git-hooks": "2.11.1",
     "stylelint": "16.11.0",
     "stylelint-config-recommended-vue": "1.5.0",
     "stylelint-config-standard": "36.0.1",
@@ -70,7 +62,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=20",
+    "node": ">=22",
     "pnpm": ">=9"
   }
 }
