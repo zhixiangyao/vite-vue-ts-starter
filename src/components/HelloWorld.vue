@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 
-withDefaults(defineProps<{ msg: string }>(), { msg: 'withDefaults-value' })
+withDefaults(defineProps<{ msg?: string }>(), { msg: 'withDefaults-value' })
 
 const count = ref(0)
 </script>

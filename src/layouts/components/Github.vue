@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { toRef } from 'vue'
 
-const props = withDefaults(defineProps<{ href: string }>(), { href: '' })
+const props = withDefaults(defineProps<{ href?: string }>(), { href: '' })
 
 const href = toRef(props, 'href')
 </script>
