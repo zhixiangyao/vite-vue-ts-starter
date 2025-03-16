@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "build": "vue-tsc && vite build",
+    "build": "vue-tsc -b && vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
     "lint": "eslint --cache --cache-location node_modules/.cache/eslint/",
@@ -37,6 +37,7 @@
     "@vitejs/plugin-vue": "5.2.1",
     "@vitejs/plugin-vue-jsx": "4.1.1",
     "@vue/compiler-sfc": "3.5.13",
+    "@vue/tsconfig": "0.7.0",
     "autoprefixer": "10.4.20",
     "dotenv": "16.4.7",
     "eslint": "9.21.0",

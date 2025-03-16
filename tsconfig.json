@@ -1,29 +1,7 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "jsxImportSource": "vue",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "moduleDetection": "force",
-    "experimentalDecorators": true,
-    "baseUrl": ".",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "paths": {
-      "/@/*": ["src/*"]
-    },
-    "resolveJsonModule": true,
-    "typeRoots": ["./node_modules/@types/", "./node_modules/vite/"],
-    "types": ["client.d.ts", "node"],
-    "allowJs": false,
-    "strict": true,
-    "noEmit": true,
-    "sourceMap": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": false,
-    "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
-  },
-  "include": ["./src"],
-  "exclude": ["node_modules", "*.js"]
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "files": []
 }
