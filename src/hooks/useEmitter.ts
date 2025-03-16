@@ -1,8 +1,4 @@
-import type { Ref } from 'vue'
-
-import { onMounted, ref } from 'vue'
-
-import { debounce } from '/@/utils'
+import { debounce } from '~/utils'
 
 /**
  * A basic recreation of http://www.cesmes.fi/#pallo.swf using JavaScript and Canvas

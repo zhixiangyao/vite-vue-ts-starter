@@ -1,15 +1,4 @@
 <script lang="tsx">
-import {
-  defineComponent,
-  onBeforeMount,
-  onBeforeUnmount,
-  onBeforeUpdate,
-  onMounted,
-  onUnmounted,
-  onUpdated,
-  toRefs,
-} from 'vue'
-
 export default defineComponent({
   name: 'Child',
   props: {

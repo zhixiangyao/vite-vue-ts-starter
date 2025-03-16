@@ -1,16 +1,16 @@
 <script lang="tsx">
 import { storeToRefs } from 'pinia'
-import { defineComponent, provide, readonly, ref, Teleport } from 'vue'
-import { RouterView, useRouter } from 'vue-router'
+import { Teleport } from 'vue'
 
+import { RouterView, useRouter } from 'vue-router'
+import { useCurrentRouteName } from '~/hooks'
+import { defaultDataKey } from '~/provide'
+
+import { useAppStore } from '~/stores'
 import Github from './components/Github.vue'
 import Main from './components/Main.vue'
 import Navigation from './components/Navigation.vue'
-
 import ToggleButton from './components/ToggleButton.vue'
-import { useCurrentRouteName } from '/@/hooks'
-import { defaultDataKey } from '/@/provide'
-import { useAppStore } from '/@/stores'
 
 const navbarList = [
   {

@@ -4,7 +4,11 @@ import { resolve } from 'node:path'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import dotenv from 'dotenv'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
+
+const r = (...args: string[]) => resolve(__dirname, ...args)
 
 const baseConfig: UserConfigExport = {
   plugins: [
@@ -13,12 +17,22 @@ const baseConfig: UserConfigExport = {
       optimize: true,
       enableObjectSlots: true,
     }),
+    AutoImport({
+      imports: ['vue'],
+      dts: r('src/auto-imports.d.ts'),
+      resolvers: [],
+    }),
+    Components({
+      dirs: [r('src/components')],
+      dts: r('src/components.d.ts'),
+      resolvers: [],
+    }),
   ],
   resolve: {
     alias: [
       {
-        find: '/@',
-        replacement: resolve(__dirname, './src'),
+        find: '~',
+        replacement: r('src'),
       },
     ],
   },
@@ -30,10 +44,9 @@ const baseConfig: UserConfigExport = {
 }
 
 export default ({ command, mode }: ConfigEnv) => {
-  const { VITE_APP_NODE_ENV, VITE_APP_TITLE } = dotenv.parse(fs.readFileSync(`.env.${mode}`))
+  const { VITE_APP_NODE_ENV } = dotenv.parse(fs.readFileSync(`.env.${mode}`))
 
   console.log('\x1B[33m%s\x1B[0m', `🏭--NODE ENV (VITE_APP_NODE_ENV): ${VITE_APP_NODE_ENV}`)
-  console.log('\x1B[36m%s\x1B[0m', `🏠--APP TITLE (VITE_APP_TITLE): ${VITE_APP_TITLE}`)
 
   if (command === 'serve') {
     return defineConfig({ ...baseConfig })

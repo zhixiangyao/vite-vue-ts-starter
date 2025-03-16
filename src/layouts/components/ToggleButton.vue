@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useDark, useToggle } from '/@/hooks'
+import { useDark, useToggle } from '~/hooks'
 
 defineOptions({ name: 'ToggleButton' })
 

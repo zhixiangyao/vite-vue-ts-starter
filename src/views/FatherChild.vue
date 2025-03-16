@@ -1,10 +1,7 @@
 <script lang="tsx">
-import { defineComponent, inject } from 'vue'
-
-import Child from '/@/components/Child.vue'
-
-import Father from '/@/components/Father.vue'
-import { defaultDataKey } from '/@/provide'
+import Child from '~/components/Child.vue'
+import Father from '~/components/Father.vue'
+import { defaultDataKey } from '~/provide'
 
 function handleClick(msg: string, event: MouseEvent) {
   console.log(msg, event)

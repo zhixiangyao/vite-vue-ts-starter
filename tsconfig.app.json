@@ -6,7 +6,7 @@
     /* Bundler mode */
     "baseUrl": ".",
     "paths": {
-      "/@/*": ["src/*"]
+      "~/*": ["src/*"]
     },
 
     /* Linting */

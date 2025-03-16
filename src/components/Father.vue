@@ -1,17 +1,5 @@
 <script lang="tsx">
-import {
-  defineComponent,
-  onBeforeMount,
-  onBeforeUnmount,
-  onBeforeUpdate,
-  onMounted,
-  onUnmounted,
-  onUpdated,
-  reactive,
-  renderSlot,
-  toRefs,
-  useSlots,
-} from 'vue'
+import { renderSlot } from 'vue'
 
 export default defineComponent({
   name: 'Father',

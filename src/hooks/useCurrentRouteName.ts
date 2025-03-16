@@ -1,6 +1,4 @@
-import type { Ref } from 'vue'
 import type { RouteLocationNormalizedLoaded } from 'vue-router'
-import { ref, watch } from 'vue'
 
 import { useRoute } from 'vue-router'
 

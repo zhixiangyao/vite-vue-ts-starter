@@ -1,7 +1,7 @@
 <script lang="tsx">
-import { defineComponent, renderSlot, useSlots } from 'vue'
+import { renderSlot } from 'vue'
 
-import { useAppStore } from '/@/stores'
+import { useAppStore } from '~/stores'
 
 export default defineComponent({
   name: 'Navigation',

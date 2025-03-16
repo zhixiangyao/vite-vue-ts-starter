@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { onBeforeRouteLeave } from 'vue-router'
-import { useEmitter } from '/@/hooks'
+import { useEmitter } from '~/hooks'
 
 const EmitterCanvas = useEmitter()
 

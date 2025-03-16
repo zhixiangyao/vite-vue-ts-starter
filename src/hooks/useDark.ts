@@ -1,6 +1,3 @@
-import type { Ref } from 'vue'
-import { ref, watchEffect } from 'vue'
-
 function useDark() {
   const htmlClassList = document.documentElement.classList
 

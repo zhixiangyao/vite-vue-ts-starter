@@ -1,6 +1,4 @@
 <script lang="tsx">
-import { defineComponent } from 'vue'
-
 import TailwindDemo from './components/TailwindDemo.vue'
 
 function Tailwind() {

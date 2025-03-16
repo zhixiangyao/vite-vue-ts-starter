@@ -7,28 +7,28 @@ import 'nprogress/nprogress.css'
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    component: () => import('/@/layouts/index.vue'),
+    component: () => import('~/layouts/index.vue'),
     redirect: () => ({ name: 'Home' }),
     children: [
       {
         path: 'Home',
         name: 'Home',
-        component: () => import('/@/views/Home.vue'),
+        component: () => import('~/views/Home.vue'),
       },
       {
         path: 'FatherChild',
         name: 'FatherChild',
-        component: () => import('/@/views/FatherChild.vue'),
+        component: () => import('~/views/FatherChild.vue'),
       },
       {
         path: 'Tailwind',
         name: 'Tailwind',
-        component: () => import('/@/views/Tailwind/index.vue'),
+        component: () => import('~/views/Tailwind/index.vue'),
       },
       {
         path: 'Particle',
         name: 'Particle',
-        component: () => import('/@/views/Particle.vue'),
+        component: () => import('~/views/Particle.vue'),
       },
     ],
   },
