@@ -20,7 +20,7 @@ function FatherChild() {
       <Father
         msg="Father"
         v-slots={{
-          default: ({ name }: { [x: string]: string }) => <Child msg="Child" slotProp={name} />,
+          default: ({ name }: { name: string }) => <Child msg="Child" slotProp={name} />,
         }}
       />
     </>

@@ -28,14 +28,7 @@ class Emitter {
    * @param s
    * @param l
    */
-  private createParticle(
-    x: number,
-    y: number,
-    size: number,
-    h: number,
-    s: number,
-    l: number,
-  ): void {
+  private createParticle(x: number, y: number, size: number, h: number, s: number, l: number): void {
     const particle = new Particle()
     particle.x = x
     particle.y = y
@@ -57,44 +50,46 @@ class Emitter {
     }
 
     for (let i = 0; i < this.particles.length; i++) {
+      const item = this.particles[i]!
+
       if (
         !popped
-        && this.particles[i].size > this.sizeLimit
-        && this.particles[i].x - this.particles[i].size < x
-        && this.particles[i].y - this.particles[i].size < y
-        && this.particles[i].x + this.particles[i].size > x
-        && this.particles[i].y + this.particles[i].size > y
+        && item.size > this.sizeLimit
+        && item.x - item.size < x
+        && item.y - item.size < y
+        && item.x + item.size > x
+        && item.y + item.size > y
       ) {
-        this.particles[i].size = this.particles[i].size / 2
-        this.particles[i].h = this.particles[i].h + Math.random() * 60 - 30
-        this.particles[i].s = Math.round(Math.random() * 50 + 50)
-        this.particles[i].l = Math.round(Math.random() * 50) + 25
+        item.size = item.size / 2
+        item.h = item.h + Math.random() * 60 - 30
+        item.s = Math.round(Math.random() * 50 + 50)
+        item.l = Math.round(Math.random() * 50) + 25
         this.createParticle(
-          this.particles[i].x + this.particles[i].size,
-          this.particles[i].y - this.particles[i].size,
-          this.particles[i].size,
-          Math.round(this.particles[i].h + Math.random() * 60 - 30),
+          item.x + item.size,
+          item.y - item.size,
+          item.size,
+          Math.round(item.h + Math.random() * 60 - 30),
           Math.round(Math.random() * 50 + 50),
           Math.round(Math.random() * 50) + 25,
         )
         this.createParticle(
-          this.particles[i].x + this.particles[i].size,
-          this.particles[i].y + this.particles[i].size,
-          this.particles[i].size,
-          Math.round(this.particles[i].h + Math.random() * 60 - 30),
+          item.x + item.size,
+          item.y + item.size,
+          item.size,
+          Math.round(item.h + Math.random() * 60 - 30),
           Math.round(Math.random() * 50 + 50),
           Math.round(Math.random() * 50) + 25,
         )
         this.createParticle(
-          this.particles[i].x - this.particles[i].size,
-          this.particles[i].y + this.particles[i].size,
-          this.particles[i].size,
-          Math.round(this.particles[i].h + Math.random() * 60 - 30),
+          item.x - item.size,
+          item.y + item.size,
+          item.size,
+          Math.round(item.h + Math.random() * 60 - 30),
           Math.round(Math.random() * 50 + 50),
           Math.round(Math.random() * 50) + 25,
         )
-        this.particles[i].x = this.particles[i].x - this.particles[i].size
-        this.particles[i].y = this.particles[i].y - this.particles[i].size
+        item.x = item.x - item.size
+        item.y = item.y - item.size
         popped = true
       }
     }
@@ -110,23 +105,11 @@ class Emitter {
     this.canvasContext.clearRect(0, 0, 600, 600)
 
     for (let i = 0; i < this.particles.length; i++) {
-      this.canvasContext.fillStyle
-        = `hsl(${
-          this.particles[i].h
-        }, ${
-          this.particles[i].s
-        }%, ${
-          this.particles[i].l
-        }%)`
+      const item = this.particles[i]!
+
+      this.canvasContext.fillStyle = `hsl(${item.h}, ${item.s}%, ${item.l}%)`
       this.canvasContext.beginPath()
-      this.canvasContext.arc(
-        this.particles[i].x,
-        this.particles[i].y,
-        this.particles[i].size,
-        0,
-        Math.PI * 2,
-        true,
-      )
+      this.canvasContext.arc(item.x, item.y, item.size, 0, Math.PI * 2, true)
       this.canvasContext.fill()
     }
   }
