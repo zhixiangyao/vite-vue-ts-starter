@@ -2,20 +2,20 @@
 
 This template will help you start developing with Vue3 VueRouter Pinia TypeScript TailwindCSS in Vite.
 
-**Editor:**
+- **Editor:**
 
-- [VSCode](https://code.visualstudio.com/)
+  - [VSCode](https://code.visualstudio.com/)
 
-**VSCode extension:**
+- **VSCode extension:**
 
-- [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
-- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+  - Vue
+  - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-**Development ENV:**
+- **Development ENV:**
 
-- git => 2.39.0
-- node => 24.11.0
-- pnpm => 10.20.0
+  - git => 2.39.0
+  - node => 24.11.0
+  - pnpm => 10.21.0
 
 ## Clone
 
