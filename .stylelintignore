@@ -5,5 +5,7 @@
 /node_modules/*
 
 **/*.html
+**/*.ts
+**/*.tsx
 **/*.js
 **/*.mjs
