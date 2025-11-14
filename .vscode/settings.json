@@ -1,11 +1,13 @@
 {
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.useFlatConfig": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "css.customData": [".vscode/tailwindcss.json"],
-  "files.associations": {
-    "*.css": "tailwindcss"
+  "tailwindCSS.experimental.configFile": {
+    "src/styles/app.css": "src/**"
   }
 }
