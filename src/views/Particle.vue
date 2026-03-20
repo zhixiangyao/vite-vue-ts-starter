@@ -1,8 +1,13 @@
 <script lang="ts" setup>
 import { onBeforeRouteLeave } from 'vue-router'
-import { useEmitter } from '~/hooks'
+import { Emitter } from '~/utils/emitter'
 
-const EmitterCanvas = useEmitter()
+const EmitterCanvas = useTemplateRef<HTMLCanvasElement>('EmitterCanvas')
+
+onMounted(() => {
+  const emitter: Emitter = new Emitter(EmitterCanvas.value)
+  emitter.init()
+})
 
 onBeforeRouteLeave(() => {
   const answer = window.confirm('你真的要离开吗！')

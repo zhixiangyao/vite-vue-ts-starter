@@ -10,8 +10,8 @@
     "url": "git+https://github.com/zhixiangyao/vite-vue-ts-starter.git"
   },
   "engines": {
-    "node": ">=24.13.0",
-    "pnpm": ">=10.29.3"
+    "node": ">=24.14.0",
+    "pnpm": ">=10.32.1"
   },
   "scripts": {
     "dev": "vite --host",
@@ -26,34 +26,35 @@
   "dependencies": {
     "nprogress": "0.2.0",
     "pinia": "3.0.4",
-    "vue": "3.5.28",
-    "vue-router": "5.0.2"
+    "vue": "3.5.30",
+    "vue-router": "5.0.4"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "7.4.3",
-    "@types/node": "24.10.13",
+    "@antfu/eslint-config": "7.7.3",
+    "@types/node": "24.12.0",
     "@types/nprogress": "0.2.3",
-    "@typescript-eslint/eslint-plugin": "8.55.0",
-    "@vitejs/plugin-vue": "6.0.4",
-    "@vitejs/plugin-vue-jsx": "5.1.4",
-    "@vue/compiler-sfc": "3.5.28",
-    "@vue/tsconfig": "0.8.1",
-    "eslint": "10.0.0",
-    "lint-staged": "16.2.7",
-    "postcss": "8.5.6",
+    "@typescript-eslint/eslint-plugin": "8.57.1",
+    "@vitejs/plugin-vue": "6.0.5",
+    "@vitejs/plugin-vue-jsx": "5.1.5",
+    "@vue/compiler-sfc": "3.5.30",
+    "@vue/tsconfig": "0.9.0",
+    "eslint": "9.39.4",
+    "lint-staged": "16.4.0",
+    "postcss": "8.5.8",
     "postcss-html": "1.8.1",
     "postcss-load-config": "6.0.1",
     "simple-git-hooks": "2.13.1",
-    "stylelint": "17.2.0",
+    "stylelint": "17.5.0",
+    "stylelint-config-recess-order": "^7.7.0",
     "stylelint-config-recommended-vue": "1.6.1",
     "stylelint-config-standard": "40.0.0",
-    "stylelint-order": "7.0.1",
-    "tailwindcss": "4.1.18",
+    "stylelint-order": "8.1.1",
+    "tailwindcss": "3.4.18",
     "typescript": "5.9.3",
     "unplugin-auto-import": "21.0.0",
     "unplugin-vue-components": "31.0.0",
-    "vite": "7.3.1",
-    "vue-tsc": "3.2.4"
+    "vite": "8.0.1",
+    "vue-tsc": "3.2.6"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"

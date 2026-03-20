@@ -6,7 +6,7 @@ import { debounce } from '~/utils'
  * Patrick H. Lauke / February 2011
  * Zhixiang Yao / March 2021
  */
-class Emitter {
+export class Emitter {
   private canvas: HTMLCanvasElement | null
   private sizeLimit: number
   private particles: Particle[]
@@ -158,15 +158,4 @@ class Particle {
     this.s = 0
     this.l = 0
   }
-}
-
-export function useEmitter() {
-  const EmitterCanvas: Ref<HTMLCanvasElement | null> = ref(null)
-
-  onMounted(() => {
-    const emitter: Emitter = new Emitter(EmitterCanvas.value)
-    emitter.init()
-  })
-
-  return EmitterCanvas
 }
