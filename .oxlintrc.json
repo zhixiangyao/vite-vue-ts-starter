@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "vue", "unicorn", "oxc"],
+  "env": {
+    "builtin": true,
+    "browser": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.cache/**",
+    "**/coverage/**",
+    "**/*.tsbuildinfo",
+    "src/auto-imports.d.ts",
+    "src/components.d.ts"
+  ],
+  "rules": {
+    "no-console": "off",
+    "no-alert": "off"
+  }
+}
