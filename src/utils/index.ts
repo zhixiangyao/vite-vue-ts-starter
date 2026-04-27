@@ -4,14 +4,11 @@ export function debounce<T extends any[]>(func: (...args: T) => void, wait: numb
   return (...args: T) => {
     const later = () => {
       timeout = null
-      if (!immediate)
-        func(...args)
+      if (!immediate) func(...args)
     }
     const callNow = immediate && !timeout
-    if (timeout !== null)
-      clearTimeout(timeout)
+    if (timeout !== null) clearTimeout(timeout)
     timeout = window.setTimeout(later, wait)
-    if (callNow)
-      func(...args)
+    if (callNow) func(...args)
   }
 }

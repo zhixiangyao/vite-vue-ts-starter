@@ -6,8 +6,7 @@ function useDark() {
   watchEffect(() => {
     if (isDark.value) {
       htmlClassList.add('dark')
-    }
-    else {
+    } else {
       htmlClassList.remove('dark')
     }
   })

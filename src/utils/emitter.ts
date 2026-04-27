@@ -53,12 +53,12 @@ export class Emitter {
       const item = this.particles[i]!
 
       if (
-        !popped
-        && item.size > this.sizeLimit
-        && item.x - item.size < x
-        && item.y - item.size < y
-        && item.x + item.size > x
-        && item.y + item.size > y
+        !popped &&
+        item.size > this.sizeLimit &&
+        item.x - item.size < x &&
+        item.y - item.size < y &&
+        item.x + item.size > x &&
+        item.y + item.size > y
       ) {
         item.size = item.size / 2
         item.h = item.h + Math.random() * 60 - 30
@@ -99,8 +99,7 @@ export class Emitter {
   }
 
   private draw(): void {
-    if (this.canvasContext === null)
-      throw new Error('canvasContext 不能为 null')
+    if (this.canvasContext === null) throw new Error('canvasContext 不能为 null')
 
     this.canvasContext.clearRect(0, 0, 600, 600)
 

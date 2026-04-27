@@ -11,8 +11,7 @@ onMounted(() => {
 
 onBeforeRouteLeave(() => {
   const answer = window.confirm('你真的要离开吗！')
-  if (!answer)
-    return false
+  if (!answer) return false
 })
 </script>
 
