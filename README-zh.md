@@ -1,48 +1,48 @@
 # Vite + Vue 3 + VueRouter + Pinia + TypeScript + TailwindCSS
 
-English · [中文](./README-zh.md)
+[English](./README.md) · 中文
 
-This template will help you start developing with Vue3 VueRouter Pinia TypeScript TailwindCSS in Vite.
+这个模板可以帮助你在 Vite 中快速开始使用 Vue3、VueRouter、Pinia、TypeScript 和 TailwindCSS 开发。
 
-- **Editor:**
+- **编辑器：**
   - [VSCode](https://code.visualstudio.com/)
 
-- **VSCode extension:**
+- **VSCode 扩展：**
   - [Vue](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
   - [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode)
   - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
   - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
-- **Development ENV:**
+- **开发环境：**
   - git => 2.39.0
   - node => 24.15.0
   - pnpm => 10.33.2
 
-## Clone
+## 克隆项目
 
 ```shell
 git clone git@github.com:zhixiangyao/vite-vue-ts-starter.git
 cd vite-vue-ts-starter
-pnpm i # If not install pnpm, please run: npm install -g pnpm
+pnpm i # 如果还没有安装 pnpm，请先执行：npm install -g pnpm
 ```
 
-## Usage
+## 使用
 
-### Development
+### 开发
 
-click it http://localhost:5173
+点击 http://localhost:5173
 
 ```shell
 pnpm dev
 ```
 
-### Build
+### 构建
 
 ```shell
 pnpm build
 ```
 
-### Check
+### 检查
 
 ```shell
 pnpm typecheck
