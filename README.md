@@ -15,8 +15,8 @@ This template will help you start developing with Vue3 VueRouter Pinia TypeScrip
 
 - **Development ENV:**
   - git => 2.39.0
-  - node => 25.9.0
-  - pnpm => 11.0.6
+  - node => 26.1.0
+  - pnpm => 11.0.9
 
 ## Clone
 
