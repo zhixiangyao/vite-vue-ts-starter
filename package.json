@@ -19,7 +19,7 @@
     "build": "pnpm typecheck && vite build",
     "preview": "npm run build && vite preview",
     "preview:dist": "vite preview",
-    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "typecheck": "vue-tsc --noEmit -p tsconfig.app.json",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
     "lint": "oxlint --fix",
